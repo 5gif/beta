@@ -30,6 +30,9 @@ url: "https://5gindiaforum.in/" # the base hostname & protocol for your site
 twitter_username: 5gindiaforum
 github_username:  5gif
 
+repon: 5gif.github.io
+branch: main
+
 collections:
   articles:
      output: true
