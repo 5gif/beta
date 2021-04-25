@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: Technology & Standards Workgroup
+title: WG - Technology & Standards 
 permalink: /:basename
 ---
 
