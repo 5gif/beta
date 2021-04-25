@@ -26,8 +26,8 @@ The Inudstry workgroup takes care of the interaction with other initiatives and 
 
 --------------------
  
-## Past Meetings
-- Kickoff meeting	Mar 2019
+## Recent Meetings
+- 
 - 
 
 ## Participating Members 
@@ -36,7 +36,7 @@ The Inudstry workgroup takes care of the interaction with other initiatives and 
 ### Guest Members
 
 
-## Report
+## Reports
 
 
 ## Resources
