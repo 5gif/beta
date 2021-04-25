@@ -10,7 +10,7 @@ consensus seeking approach.
 
 
 ## Leadership 
-- Chair : Sendil Kumar | Ericsson
+- Chair : Sendil Kumar,  Ericsson
 
 
 ## Past Meetings
