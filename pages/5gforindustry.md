@@ -4,7 +4,7 @@ title: 5G for Industry
 permalink: /:basename
 ---
 
-# Scope
+## Scope
 
 ```
 ## COAI and its role in unifying Industry inputs on 5G
