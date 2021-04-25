@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: 5G for Industry
+title: WG - 5G for Industry
 permalink: /:basename
 ---
 
