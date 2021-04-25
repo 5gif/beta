@@ -1,12 +1,16 @@
 ---
 layout: pages
-title: IMT-2020 Evaluation Group
+title: Working Group - Independent Evaluation Group
 permalink: /:basename
 ---
 
+The 5GIF IEG is one of the independent evaluation groups registered with ITU-R for IMT2020 candidate radio technology evaluation. This group was formed to evaluate the IMT2020 candidates from the perspective of Indian network deployments. This is a group of operators, OEM’s, universities and individual experts participating in a collaborative manner, in the evaluation of candidate IMT2020 technologies of interest. This is a contribution driven activity, with decisions made through a 
+consensus seeking approach.
 
 
-The 5GIF is one of the independent evaluation groups registered with ITU-R for IMT2020 candidate radio technology evaluation. This group was formed to evaluate the IMT2020 candidates from the perspective of Indian network deployments. This is a group of operators, OEM’s, universities and individual experts participating in a collaborative manner, in the evaluation of candidate IMT2020 technologies of interest. This is a contribution driven activity, with decisions made through a consensus seeking approach.
+## Leadership 
+- Chair : Sendil Kumar | Ericsson
+
 
 ## Past Meetings
 - Kickoff meeting	Mar 2019
@@ -36,7 +40,7 @@ The 5GIF is one of the independent evaluation groups registered with ITU-R for I
 ## Resources
 
 - Link to the ITU-R WP5D IMT-2020 submission and evaluation process
-- [The 5GIF Evaluation Group Home Page](http://5gif.github.io)
+- [5GIF IEG Home Page](http://ieg.5gindiaforum.in)
 
 ## Contact
 
