@@ -11,14 +11,10 @@
 
 
     <div class="container">
-      
-      https://github.com/5gif/5gif.github.io/edit/main/pages/wgieg.md
-      Page.Name is {{ page.name }}
-      </br> Page.Path is {{ page.path }}
-      
+      {{ site.github.repository_url }}
       <!-- <div class="row">
         <div class="col-lg-8 col-lg-offset-2"> -->
-      <h2> {{ page.title }} <a href="{{ page.editlink }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
+      <h2> {{ page.title }} <a href="https://github.com/5gif/5gif.github.io/edit/{{ page.path }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
           <!-- <hr class="light"> -->
         </br>
           {{ content }}
