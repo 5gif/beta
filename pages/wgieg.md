@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: Working Group - Independent Evaluation Group
+title: WG - Independent Evaluation Group
 permalink: /:basename
 editlink: https://github.com/5gif/5gif.github.io/edit/main/pages/wgieg.md         
 ---
