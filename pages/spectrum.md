@@ -19,7 +19,7 @@ Working Group - Spectrum focuses on deliberations on the technical aspects to sp
 
 --------------------
  
-## Past Meetings
+## Recent Meetings
 - 
 - 
 
@@ -29,7 +29,7 @@ Working Group - Spectrum focuses on deliberations on the technical aspects to sp
 ## Guest Members
 
 
-## Report
+## Reports
 
 
 ## Resources
