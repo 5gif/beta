@@ -22,7 +22,7 @@ The Inudstry workgroup takes care of the interaction with other initiatives and 
 ```
 
 ## Leadership 
-- Chair : Ashwani Kumar | Huawei
+- Chair : Ashwani Kumar, Huawei
 
 --------------------
  
