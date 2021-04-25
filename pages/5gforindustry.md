@@ -4,6 +4,8 @@ title: 5G for Industry
 permalink: /:basename
 ---
 
+# Scope
+
 ```
 ## COAI and its role in unifying Industry inputs on 5G
 
@@ -22,8 +24,7 @@ The Inudstry workgroup takes care of the interaction with other initiatives and 
 ## Leadership 
 - Chair : Ashwani Kumar | Huawei
 
-## Working Group Website : <> 
- 
+--------------------
  
 ## Past Meetings
 - Kickoff meeting	Mar 2019
