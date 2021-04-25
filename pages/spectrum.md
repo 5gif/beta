@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: 5GIF  WG  Spectrum 
+title: WG  Spectrum 
 permalink: /:basename
 ---
 
