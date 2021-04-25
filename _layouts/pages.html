@@ -6,15 +6,14 @@
 <body id="page-top">
   {% include nav.html %}
 <!--   {% include header.html %} -->
-
+Variable <br>{{ site.github }}  
+  </br>
+  
   <section class="no-gutters" id="start">
-
-
     <div class="container">
-      SITE REPO IS {{ site.github.repository_url }} </br>
       <!-- <div class="row">
         <div class="col-lg-8 col-lg-offset-2"> -->
-      <h2> {{ page.title }} <a target=_blank href="https://github.com/5gif/5gif.github.io/edit/{{ page.path }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
+      <h2> {{ page.title }} <a target=_blank href="{{ site.github.repository_url }}/edit/main/{{ page.path }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
           <!-- <hr class="light"> -->
         </br>
           {{ content }}
