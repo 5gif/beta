@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: WG  Spectrum 
+title: WG - Spectrum 
 permalink: /:basename
 ---
 
