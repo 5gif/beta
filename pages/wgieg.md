@@ -2,8 +2,7 @@
 layout: pages
 title: Working Group - Independent Evaluation Group
 permalink: /:basename
-editlink: https://github.com/5gif/www/edit/gh-pages/pages/wgieg.md 
-
+editlink: https://github.com/5gif/5gif.github.io/edit/main/pages/wgieg.md         
 ---
 
 The 5GIF IEG is one of the independent evaluation groups registered with ITU-R for IMT2020 candidate radio technology evaluation. This group was formed to evaluate the IMT2020 candidates from the perspective of Indian network deployments. This is a group of operators, OEM’s, universities and individual experts participating in a collaborative manner, in the evaluation of candidate IMT2020 technologies of interest. This is a contribution driven activity, with decisions made through a 
