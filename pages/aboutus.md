@@ -26,16 +26,15 @@ Adoption of 5G will require substantial investment in more downstream innovation
 * Support the creation of a venture like program to encourage eco-system players develop 5G services.
 * Collaborate with various international forums working on 5G.
 
-
-The 5GIF Forum is open for all members of COAI and to become the members of 5G India Forum. Contact us, if your organization would like to contribute and participate in 5GIF
+Contact us, if your organization would like to contribute and participate in 5GIF
 
 ## Structure / Membership
 
-5G India Forum will work through various Committees including:
-* 5G Technology Spectrum Committee
-* 5G Equipment & Devices Committee
-* 5G Policy and Regulatory Committee
-* The 5G India Forum Membership will be Free of Cost and will be based on Approval.
+5G India Forum will work through various Working Groups including:
+* WG Technology & Standards
+* WG Spectrum 
+* WG Industry
+* WG Independent Evaluation Group
 
 ## COAI Members
 
