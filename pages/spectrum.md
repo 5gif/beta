@@ -20,8 +20,8 @@ implementation at national level. (E.g mmwave implementation at national level)
  
 
 ## Leadership 
-- CO-Chairs : Dr. Punit Rathod, Qualcomm
-- CO-Chairs : Dr. Sendil Kumar, Ericsson
+- Co-Chairs : [Dr. Punit Rathod](https://www.linkedin.com/in/punitrathod/), Qualcomm
+- Co-Chairs : [Dr. Sendil Kumar](https://www.linkedin.com/in/skdevar/), Ericsson
 
 --------------------
  
