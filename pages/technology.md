@@ -8,15 +8,26 @@ permalink: /:basename
 
 ## Scope
 
-```
-<Draft>
 The 5GIF workgroup on technology and standards focuses on developing use cases and requirements tailored for Indian adoption. This includes integration concepts and migration paths, the evaluation of key technologies emerging from 5G standardization bodies like the 3GPP.
 
-```
+Disseminate informations regarding future technology and applications of 5G and beyond, through workshops, events, whitepapers, reports, etc.
+
+- Developing potential use cases / requirements and defining a common framework for 
+consideration
+ - To consider the overall architecture of future 5G-enabled industrial connectivity infrastructures, 
+ including the integration concepts and migration paths
+ - To consider the evaluation of key technologies emerging from 5G standardization bodies, including 
+ the 3GPP, GSMA, GSA, NGMN, etc.
+- To enable interoperability tests, larger trials, and the engagement with the TEC on test & 
+certification aspects
+- To assist in studies including safety, security, and new requirement creation
+ - Representing 5GIF members interest through inclusion and contribution to technical committees in the TEC, WPC, etc.
+
+ 
 
 
 ## Leadership 
-- Chair : Srinivasan Selvaganapathy, Nokia
+- Chair : [Srinivasan Selvaganapathy](https://www.linkedin.com/in/srinivasan-selvaganapathy-182aa535/), Nokia
 
 --------------------
  
