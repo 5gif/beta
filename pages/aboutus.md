@@ -33,15 +33,15 @@ Contact us, if your organization would like to contribute and participate in 5GI
 5G India Forum will work through various Working Groups including:
 * WG Technology & Standards
 * WG Spectrum 
-* WG Industry
+* WG 5G for Industry
 * WG Independent Evaluation Group
 
-## COAI Members
+## Membership & Engagements
 
-- TSPs / Associations / OEM
 - Industry Members
-- Stakeholders need to send a request for membership at coordinator@5gindiaforum.in for approval
-- Government of India Agencies / Departments
-will be invited in the Committee meetings based on invitations
-- Academia
-can participate in the Committee meetings based on invitations
+- TSPs / Associations / OEM
+- Stakeholders interested for membership are requested to reach `contact @ 5gindiaforum.in` 
+- Invited participations 
+  - Government of India Agencies / Departments in the Committee meeting
+  - Academia in the Committee meetings based on invitations
+  - Engagements with students through internships
