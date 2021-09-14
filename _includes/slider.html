@@ -10,10 +10,12 @@
 
 
 <script> 
+	.splide__slide img {
+	width : 100%;
+	height: auto;
+	}
+	
 	document.addEventListener( 'DOMContentLoaded', function () {
-	new Splide( '#image-slider', {
-		'cover'      : true,
-		'heightRatio': 0.5,
-	} ).mount();
+	new Splide( '#image-slider' ).mount();
 	} );
 </script>
