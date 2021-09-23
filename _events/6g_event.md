@@ -46,4 +46,4 @@ But what will happen afterwards? With the speed in which technology moves, it is
 
 ## Presentations
 
-* [Presentation by Hakan Ohlsen]({{ site.baseurl }}{% link /files/6g_event/Hakan.pdf %})
+* [Presentation by Hakan Ohlsen]({{ site.baseurl }}/files/6g_event/Hakan.pdf)
