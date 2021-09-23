@@ -10,18 +10,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
-              
-                <h2 class="section-heading"> {{ page.title }} 
-                  {% if page.name %} 
-                    <a href="https://github.com/5gif/www/edit/gh-pages/_events/{{ page.name }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
-                  {% endif %}
-
-                <hr class="light">
-                  {{ content }}
-
-              
+              <a target=_blank href="{{ site.github.repository_url }}/edit/{{site.github.source.branch}}/{{ page.path }}">  <i class="fa fa-edit fa-sm"> </i>  </a>
+              <h2 class="section-heading"> {{ page.title }} </h2>              
             </div>
         </div>
+        <hr class="light">
+        {{ content }}
     </div>
 </section>
 
