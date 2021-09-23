@@ -4,14 +4,16 @@
 {% include head.html %}
 <body id="page-top">
   {% include nav.html %}
-  <section>
-    <div class="bg-primary container" id="about">
+  <section class="bg-primary" id="about">
+    <div class="container" id="about">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center">
           <h2 class="section-heading"> {{ page.title }} </h2>              
         </div>
       </div>
     </div>
+  </section>
+  <section style="padding:0px !important">
     <div class="container">
       <hr class="light">
       <a target=_blank href="{{ site.github.repository_url }}/edit/{{site.github.source.branch}}/{{ page.path }}">  <i class="fa fa-edit fa-sm"> </i>  </a>
