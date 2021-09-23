@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+<body id="page-top">
+  {% include nav.html %}
+  
+   <section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+              
+                <h2 class="section-heading"> {{ page.title }} 
+                  {% if page.name %} 
+                    <a href="https://github.com/5gif/www/edit/gh-pages/_events/{{ page.name }}">  <i class="fa fa-edit fa-sm"> </i>  </a> </h2>
+                  {% endif %}
+
+                <hr class="light">
+                  {{ content }}
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+  {% include contact.html %}
+      {% include scripts.html %}
+  </body>
+</html>
