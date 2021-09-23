@@ -37,6 +37,9 @@ collections:
   articles:
      output: true
 
+collections:
+  events:
+     output: true
 
 
 # Build settings
