@@ -18,3 +18,32 @@ But what will happen afterwards? With the speed in which technology moves, it is
 * Understand from global experts on technology trends, future vision and what is happening in the ITU on evolution from 5G to 6G
 * Explore the way India wants to make its presence felt in the 6G innovations.
 * Become a partner in this global journey to 2030 and beyond
+
+## Speakers 
+
+| Speaker | Title and Organization | 
+|-------|--------|
+| Mario Maniewicz  | Director Radiocommunication Bureau, ITU |
+| A. K. Tiwari | Member Technology, Department of Telecommunications |
+| V. Raghunandan | Secretary Telecom Regulatory Authority of India |
+| Shyam Mardikar | President and Group CTO, Mobility, Jio | 
+| Dr. Magnus Frodigh | VP, Head of Ericsson Research, Co-Chair Hexa-X | 
+| Dr. Aloknath De | Senior Vice President and CTO Samsung R&D India, Bangalore | 
+| Parag Kar | Vice President Government Affairs, India and South Asia Qualcomm | 
+| Willcook Colin | Head of Research Alliance, Nokia Standards | 
+| Hakan Ohlsen | Director, Standard and Industry APAC, Vice-Chair / Chair ADHOC WP5D | 
+| Vinosh James | Technical Standards Professional, Qualcomm | 
+| Vikram Tiwathia | Deputy Director General, COAI | 
+| Reza Arefi | Director of Spectrum Strategy, Intel Corporation | 
+| HyeonWoo Lee | Professor at DanKook University in Korea, a TTA 5G Standard Committee chair, and a 5G forum executive committee vice chair | 
+| Halim Yanikomeroglu | Professor at Carleton University, Canada | 
+| Prof. Balaraman Ravindran | CSE Dept., IIT Madras | 
+| Prof. Ramjee Prasad | President, CTIF Global Capsule, Professor, Department of Business Development and Technology, Aarhus University, Herning, Denmark | 
+| Dr. Iwao Hosako | Director General, Wireless Networks Research Center, National Institute of Information and Communications Technology, Japan | 
+| Bharat Bhatia | President ITU-APT Foundataion of India | 
+| Tilak Raj Dua | Chairman ITU-APT Foundation of India | 
+| Prof. N K Goyal | Vice Chairman, ITU-APT Foundation of India | 
+
+## Presentations
+
+* [Presentation by Hakan Ohlsen]({{ site.baseurl }}{% link /files/6g_event/Hakan.pdf %})
