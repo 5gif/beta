@@ -6,7 +6,6 @@ name: 6g_event.md
 editlink: https://github.com/5gif/5gif.github.io/edit/main/events/6g_event.html
 ---
 
-
 ## About
 The future connected world in 2030 and beyond will look very different to the world we know today. 4G mobile wireless technology, that we use every day, is already giving way to the new 5G technology. A new connected, smart and intelligent society is already starting to emerge, powered by multiple access technologies including Wi-Fi, small cells, and satellite alongside terrestrial mobile cellular networks. From autonomous vehicles that are able to connect and communicate with their surroundings, to fully immersive augmented reality and virtual reality-based media and entertainment systems. From hugely efficient smart factories and end-to-end connected supply chains to the delivery of broadband connectivity to more homes than ever before, the benefits of 5G are set to reach across all areas of society.
 
@@ -47,3 +46,11 @@ But what will happen afterwards? With the speed in which technology moves, it is
 ## Presentations
 
 * [Presentation by Hakan Ohlsen]({{ site.baseurl }}/files/6g_event/Hakan.pdf)
+* [Presentation by Prof. Ramjee Prasad]({{ site.baseurl }}/files/6g_event/Prof.%20Ramjee%20Prasad.pdf)
+* [Presentation by Magnus Frodign]({{ site.baseurl }}/files/6g_event/Magnus%20Frodigh.pptx)
+* [Presentation by Halim Yanikomeroglu]({{ site.baseurl }}/files/6g_event/ATU_APT-6G_B6G_HAPS-HalimYanikomeroglu-16Sep2021%20(2).pptx)
+* [Presentation by Reza Arefi]({{ site.baseurl }}/files/6g_event/2021_09_16_(Reze)IAFI-5GIF%20workshop_Intel_final%20(1).pdf)
+* [Presentation by Mario Maniewicz]({{ site.baseurl }}/files/6g_event/Slides%20Mario%20Maniewicz%20Dir%20BR%20-%20Copy.pdf)
+* [Presentation by Dr. Iwao Hosako]({{ site.baseurl }}/files/6g_event/Dr%20Hosako.pdf)
+* [Presentation by HyeonWoo Lee]({{ site.baseurl }}/files/6g_event/IAFI_5GIF_Korea_20210916_R1.pdf)
+* [Presentation by Willcock Colin]({{ site.baseurl }}/files/6g_event/___.pdf)
