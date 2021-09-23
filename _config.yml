@@ -36,8 +36,6 @@ branch: main
 collections:
   articles:
      output: true
-
-collections:
   events:
      output: true
 
