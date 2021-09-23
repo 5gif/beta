@@ -20,6 +20,7 @@ But what will happen afterwards? With the speed in which technology moves, it is
 
 ## Speakers 
 
+{:class="table table-bordered"}
 | Speaker | Title and Organization | 
 |-------|--------|
 | Mario Maniewicz  | Director Radiocommunication Bureau, ITU |
