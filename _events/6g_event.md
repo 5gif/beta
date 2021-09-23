@@ -6,6 +6,11 @@ name: 6g_event.md
 editlink: https://github.com/5gif/5gif.github.io/edit/main/events/6g_event.html
 ---
 
+## Event Details
+
+* Date: 16 September 2021
+* Venue: Virtual
+
 ## About
 The future connected world in 2030 and beyond will look very different to the world we know today. 4G mobile wireless technology, that we use every day, is already giving way to the new 5G technology. A new connected, smart and intelligent society is already starting to emerge, powered by multiple access technologies including Wi-Fi, small cells, and satellite alongside terrestrial mobile cellular networks. From autonomous vehicles that are able to connect and communicate with their surroundings, to fully immersive augmented reality and virtual reality-based media and entertainment systems. From hugely efficient smart factories and end-to-end connected supply chains to the delivery of broadband connectivity to more homes than ever before, the benefits of 5G are set to reach across all areas of society.
 
