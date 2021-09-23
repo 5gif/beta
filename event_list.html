@@ -1,0 +1,17 @@
+---
+layout: pages
+title: 5GIF Events 
+---
+List of events by 5GIF
+
+<ul>
+  {% for post in site.events %}
+    <li>
+   <a href= "{{ post.url }}"> 
+ <h3>{{ post.title }}</h3> </a>
+<b> Summary : </b>
+      <p>{{ post.summary  }}</p>
+    </li>
+</hr>
+  {% endfor %} 
+</ul>
