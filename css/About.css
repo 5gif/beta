@@ -121,7 +121,7 @@ body {
     font-weight: 1000;
     font-family: "Brush Script MT", cursive;
     color: var(--dark); */
-    font-size: 80px;
+    font-size: 2em;
     font-family: var(--font);
     color: var(--pure);
     line-height: 1;
