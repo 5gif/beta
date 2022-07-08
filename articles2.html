@@ -1,0 +1,18 @@
+---
+layout: pages
+title: 5GIF Article list
+---
+List of posts by our members
+
+<ul>
+  {% for post in site.articles %}
+  <li>
+    <a href="{{ post.url }}">
+      <h3>{{ post.title }}</h3>
+    </a>
+    <b> Summary : </b>
+    <p>{{ post.summary }}</p>
+  </li>
+  </hr>
+  {% endfor %}
+</ul>

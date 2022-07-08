@@ -1,0 +1,34 @@
+:root {
+    --primary: #02a2ff;
+    --light: #c9eafd;
+    --dark: #1a1a1a;
+    --font: 'Inter', sans-serif;
+}
+
+.no-gutters {
+    font-family: var(--font);
+    padding: 10% 10%;
+}
+
+
+.container2{
+    padding: 4%;
+    border: 2px solid var(--dark);
+    border-radius: 20px;
+    box-shadow: #00000059 0px 5px 15px;
+    font-size: 20px;
+    background-color: rgb(201, 234, 253, 0.4);
+}
+.container2 .title-p {
+    font-weight: 300;
+
+}
+
+.container2 h2 {
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+
+}

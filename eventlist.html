@@ -1,0 +1,30 @@
+---
+layout: events
+title: Events
+permalink: /events
+---
+  <div class="event">
+    <div class="row row-cols-md-3 g-4">
+      {% assign sortedposts = site.events | sort: 'index' | reverse %} 
+      {% for post in sortedposts %} 
+      {% unless post.draft==true %}
+      <div class="col">
+        <a href="{{post.url}}">
+          <div class="card">
+            <img
+              src="{{ post.img }}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">
+               {{post.title}}
+              </h5>
+            </div>
+          </div>
+          </a>
+        </div>
+{% endunless %} 
+{% endfor %}
+    </div>
+  </div>

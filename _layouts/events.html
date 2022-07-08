@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include header.html %}
+
+  <section class="no-gutters" id="start">
+    <div class="container1">
+      <h3 class="title-p"> {{ page.title }} </h3>
+      </br>
+      {{ content }}
+    </div>
+  </section>
+  {% include footer.html %}
+</body>
+{% include script.html %}
+
+</html>

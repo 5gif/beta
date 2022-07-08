@@ -1,0 +1,27 @@
+<section id="event-sec" class="event-slider" onclick="menuopen(1)">
+  <div class="event">
+    <div class="about-title text-center">
+      <p>Events</p>
+    </div>
+    <div class="more-card">
+      <a href="/events" class="fs-6 fw-normal"
+        >View All<i class="fa-solid fa-arrow-right-long"></i
+      ></a>
+    </div>
+    <div class="row row-cols-md-4 g-4">
+      {% assign sortedposts = site.events | sort: 'index' | reverse %} {% for
+      post in sortedposts limit:4%} {% unless post.draft==true %}
+      <div class="col">
+        <a href="{{post.url}}">
+          <div class="card">
+            <img src="{{ post.img }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{post.title}}</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endunless %} {% endfor %}
+    </div>
+  </div>
+</section>
