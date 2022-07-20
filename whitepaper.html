@@ -1,26 +1,20 @@
 ---
-layout: event
-title: Events
+layout: whitepaper
+title: Whitepaper
 ---
 
 <div class="event">
-  <div class="row row-cols-md-3 g-4">
-    {% assign sortedposts = site.events | sort: 'index' | reverse %} {% for post
+  <div class="row row-cols-md-4 g-4">
+    {% assign sortedposts = site.whitepaper | sort: 'index' | reverse %} {% for post
     in sortedposts %} {% unless post.draft==true %}
     <div class="col">
       <a href="{{post.url}}">
         <div class="card">
-          {% if post.img %} 
+          <!-- {% if post.img %} 
               <img src="{{ post.img }}" class="card-img-top" alt="...">
-              <!-- <P>IMAGE</P> -->
               {% else %} 
               <img src="./images/default-image-event1.jpg" class="card-img-top" alt="...">
-              <!-- <P>NO IMAGE</P> -->
-          {% endif %}
-          <!-- {% if post.img %}
-            <img class="card-img-top" src="{{post.img}}" alt="..."/>
           {% endif %} -->
-          <!-- <img src="{{ post.img }}" class="card-img-top" alt="..." /> -->
           <div class="card-body">
             <h5 class="card-title fw-bold">{{post.title}}</h5>
           </div>

@@ -33,7 +33,7 @@ repon: 5gif_in.github.io
 branch: main
 
 collections:
-  articles:
+  whitepaper:
     output: true
   events:
     output: true

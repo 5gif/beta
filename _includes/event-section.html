@@ -4,7 +4,7 @@
       <p>Events</p>
     </div>
     <div class="more-card">
-      <a href="/events" class="fs-6 fw-normal"
+      <a href="../eventlist.html" class="fs-6 fw-normal"
         >View All<i class="fa-solid fa-arrow-right-long"></i
       ></a>
     </div>
@@ -14,7 +14,15 @@
       <div class="col">
         <a href="{{post.url}}">
           <div class="card">
-            <img src="{{ post.img }}" class="card-img-top" alt="..." />
+
+            {% if post.img %} 
+              <img src="{{ post.img }}" class="card-img-top" alt="...">
+              <!-- <P>IMAGE</P> -->
+              {% else %} 
+              <img src="./images/default-image-event1.jpg" class="card-img-top" alt="...">
+              <!-- <P>NO IMAGE</P> -->
+            {% endif %}
+            <!-- <img src="{{ post.img }}" class="card-img-top" alt="..." /> -->
             <div class="card-body">
               <h5 class="card-title fw-bold">{{post.title}}</h5>
             </div>
