@@ -63,4 +63,4 @@ But what will happen afterwards? With the speed in which technology moves, it is
 - [Presentation by Mario Maniewicz]({{ site.baseurl }}/files/6g_event/Slides%20Mario%20Maniewicz%20Dir%20BR%20-%20Copy.pdf)
 - [Presentation by Dr. Iwao Hosako]({{ site.baseurl }}/files/6g_event/Dr%20Hosako.pdf)
 - [Presentation by HyeonWoo Lee]({{ site.baseurl }}/files/6g_event/IAFI_5GIF_Korea_20210916_R1.pdf)
-- [Presentation by Willcock Colin]({{ site.baseurl }}/files/6g_event/\_\_\_.pdf)
+- [Presentation by Willcock Colin]({{ site.baseurl }}/files/6g_event/IAFI%20and%205G%20India%20SNS%20Intro%2C%20(Colin)%20%20Sept%202021%20-%20Colin%20Willcock.pdf)
