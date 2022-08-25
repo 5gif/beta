@@ -71,7 +71,7 @@
   }
 
   .about-title {
-    font-size: 57px;
+    font-size: 54px;
   }
 
   .view-card {
@@ -114,7 +114,7 @@
   }
 
   .member-title {
-    font-size: 57px;
+    font-size: 54px;
   }
 
   .grid-item {
@@ -159,7 +159,7 @@
   }
 
   .container {
-    font-size: 25px;
+    font-size: 21px;
   }
 
   h6 {
@@ -193,7 +193,7 @@
   }
 
   .header .header-right a {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .header-right {
@@ -240,7 +240,7 @@
   }
 
   .about-title {
-    font-size: 40px;
+    font-size: 37px;
   }
 
   .view-card {
@@ -283,7 +283,7 @@
   }
 
   .member-title {
-    font-size: 40px;
+    font-size: 37px;
   }
 
   .grid-item {
@@ -327,12 +327,12 @@
   }
 
   .container {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .dropdown-content a {
     padding: 7px 14px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .dropdown-content {
@@ -418,7 +418,7 @@
   }
 
   .about-title {
-    font-size: 45px;
+    font-size: 42px;
   }
 
   .image {
@@ -460,7 +460,7 @@
   }
 
   .member-title {
-    font-size: 45px;
+    font-size: 42px;
   }
 
   .member-img {
@@ -555,7 +555,7 @@
   }
 
   .header .header-right a {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .header-right {
@@ -567,7 +567,7 @@
   }
 
   .dropdown-content {
-    margin-left: 67.5%;
+    margin-left: 74.5%;
   }
 
   .dropdown-content {
@@ -576,7 +576,7 @@
 
   .dropdown-content a {
     padding: 8px 25px;
-    font-size: 17px;
+    font-size: 14px;
   }
 
   /* .right-side .right-image {
@@ -679,11 +679,11 @@
   }
 
   .about-title {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .member-title {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .member-img {
@@ -879,7 +879,7 @@
   }
 
   .about-title {
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .view-card {
@@ -933,7 +933,7 @@
   }
 
   .member-title {
-    font-size: 23px;
+    font-size: 20px;
   }
 
   .car-media i {
@@ -969,7 +969,7 @@
   }
 
   .container {
-    font-size: 13px;
+    font-size: 9px;
   }
 
   .member-img {
@@ -1152,7 +1152,7 @@
   }
 
   .about-title {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .wg-btn {
@@ -1221,7 +1221,7 @@
   }
 
   .member-title {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .member-img {
@@ -1499,7 +1499,7 @@
   .about-title {
     font-family: var(--font);
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #workfroups {
@@ -1587,7 +1587,7 @@
   .member-title {
     font-family: var(--font);
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
     color: var(--dark);
   }
 
@@ -1918,7 +1918,7 @@
 
   .about-title {
     font-family: var(--font);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 15px;
   }
 
@@ -2025,7 +2025,7 @@
 
   .member-title {
     font-family: var(--font);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 15px;
     color: var(--dark);
   }

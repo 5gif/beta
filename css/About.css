@@ -11,7 +11,8 @@ body {
     --primary: #02a2ff;
     --light: #c9eafd;
     --dark: #1a1a1a;
-    --font: 'Inter', sans-serif;
+    /* --font: 'Inter', sans-serif; */
+    /* --font: 'Times New Roman', Times, serif; */
 }
 
 .u-button-style {
@@ -398,7 +399,7 @@ h6:hover .heading1 {
 
 .about-title {
     font-family: var(--font);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 40px;
 }
 
@@ -669,7 +670,7 @@ h6:hover .heading1 {
 
 .member-title {
     font-family: var(--font);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 40px;
     color: var(--dark);
 }

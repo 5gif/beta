@@ -2,11 +2,9 @@
     --primary: #02a2ff;
     --light: #c9eafd;
     --dark: #1a1a1a;
-    --font: 'Inter', sans-serif;
 }
 
 .no-gutters {
-    font-family: var(--font);
     padding: 10% 10%;
 }
 
