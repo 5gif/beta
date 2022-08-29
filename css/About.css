@@ -15,6 +15,9 @@ body {
     /* --font: 'Times New Roman', Times, serif; */
 }
 
+.card-height{
+    height: 100%;
+}
 .u-button-style {
     padding: 3px 10px;
     font-size: calc(1em + 6px);
