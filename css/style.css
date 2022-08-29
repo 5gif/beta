@@ -14,9 +14,7 @@ a {
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
-.event-sec .event .card {
-  height: 100%;
-}
+
 a,
 a:hover {
   text-decoration: none !important;
