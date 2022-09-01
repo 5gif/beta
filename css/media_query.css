@@ -172,10 +172,6 @@
 }
 
 @media (max-width: 1536px) {
-  .working_card_h {
-    min-height: 366px;
-  }
-
   .container2 {
     font-size: 17px;
   }
@@ -524,9 +520,6 @@
     font-size: 14px;
   }
 
-  .working_card_h {
-    min-height: 312px;
-  }
 
   .right-side .right-image {
     margin-left: 20%;
@@ -752,7 +745,7 @@
   }
 
   .working_card_h {
-    min-height: 281px;
+    height: 100%;
   }
 
   .working-cards {
@@ -1665,7 +1658,7 @@
   }
 
   .working_card_h {
-    min-height: 173px;
+    height: 100%;
     width: 91px;
   }
 
@@ -2019,8 +2012,8 @@
   }
 
   .working_card_h {
-    min-height: 160px;
     width: 91px;
+    height: 100%;
   }
 
   .member-title {

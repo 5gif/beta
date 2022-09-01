@@ -531,8 +531,8 @@ h6:hover .heading1 {
     background-color: var(--dark);
     
 }
-.working_card_h{
-    min-height: 368px;
+.working_card_h {
+    height: 100%;
 }
 .working_card_h:hover{
     transition: all 0.3s ease-in-out;
