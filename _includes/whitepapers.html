@@ -13,14 +13,16 @@
       post in sortedposts limit:5%} {% unless post.draft==true %}
       <div class="col">
         <a href="{{post.filepath}}">
-          <div class="card h-100">
+          <div class="card" style="height: 100%;>
+                                   
 
             {% if post.preview %} 
               <img src="{{ post.preview }}" class="card-img-top" alt="...">
               {% else %} 
               <img src="./images/default-whitepaper.png" class="card-img-top" alt="...">
             {% endif %}
-            <!-- <img src="{{ post.img }}" class="card-img-top" alt="..." /> -->
+                                                                                       
+ 
             <div class="card-body">
               <h5 class="card-title fw-bold">{{post.title}}</h5>
               <h5>{{post.release}}</h5>              
