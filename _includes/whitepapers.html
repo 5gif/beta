@@ -4,16 +4,18 @@
       <p>whitepapers</p>
     </div>
     <div class="more-card">
-      <a href="../whitepaper.html" class="fs-6 fw-normal"
+      <a href="/whitepaper.html" class="fs-6 fw-normal"
         >View All<i class="fa-solid fa-arrow-right-long"></i
       ></a>
     </div>
     <div class="row row-cols-md-5 g-4">
-      {% assign sortedposts = site.whitepaper | sort: 'index' %} {% for
-      post in sortedposts limit:5%} {% unless post.draft==true %}
+      {% assign sortedposts = site.whitepaper | sort: 'index' %} 
+      {% for
+      post in sortedposts limit:5%} 
+      {% unless post.draft==true %}
       <div class="col">
         <a href="{{post.filepath}}">
-          <div class="card" style="height: 100%;>
+          <div class="card">
                                    
 
             {% if post.preview %} 
