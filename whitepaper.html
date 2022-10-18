@@ -5,27 +5,44 @@ title: Whitepaper
 
 <div class="event">
   <div class="row row-cols-md-4 g-4">
+<!--     <div class="col"> -->
+      <div class="ui link cards">      
     {% assign sortedposts = site.whitepaper | sort: 'index' | reverse %} {% for post
     in sortedposts %} {% unless post.draft==true %}
-    <div class="col">
-      <a href="{{post.filepath}}">
-        
-         <div class="card">
 
-            {% if post.preview %} 
-              <img src="{{ post.preview }}" class="card-img-top" alt="...">
-              {% else %} 
-              <img src="./images/default-image-event1.jpg" class="card-img-top" alt="...">
-            {% endif %}
-            <!-- <img src="{{ post.img }}" class="card-img-top" alt="..." /> -->
-            <div class="card-body">
-              <h5 class="card-title fw-bold">{{post.title}}</h5>
-              <h5 >{{post.release}}</h5>              
-            </div>
-          </div>
-        
-      </a>
+  <div class="card">
+    <div class="image">
+      <img src="{{post.preview}}">
     </div>
+    <div class="content">
+      <div class="header">{{post.title}}</div>
+      <div class="meta">
+        <a>Friends</a>
+      </div>
+      <div class="description">
+        Matthew is an interior designer living in New York.
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        Joined in 2013
+      </span>
+      <span>
+        <i class="user icon"></i>
+        75 Friends
+      </span>
+    </div>
+  </div>
+  
+</div>
+      
+      
+      
+<!--       <a href="{{post.filepath}}">
+        
+      </a> -->
+
     {% endunless %} {% endfor %}
+        </div>
   </div>
 </div>
