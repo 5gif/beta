@@ -9,7 +9,7 @@
       ></a>
     </div>
     <div class="row row-cols-md-5 g-4">
-      {% assign sortedposts = site.whitepaper | sort: 'index' | reverse %} {% for
+      {% assign sortedposts = site.whitepaper | sort: 'index' %} {% for
       post in sortedposts limit:5%} {% unless post.draft==true %}
       <div class="col">
         <a href="{{post.filepath}}">
