@@ -2,47 +2,35 @@
 layout: whitepaper
 title: Whitepaper
 ---
-
-<div class="event">
-  <div class="row row-cols-md-4 g-4">
-<!--     <div class="col"> -->
-      <div class="ui link cards">      
-    {% assign sortedposts = site.whitepaper | sort: 'index' | reverse %} {% for post
-    in sortedposts %} {% unless post.draft==true %}
-
-  <div class="card">
-    <div class="image">
-      <img src="{{post.preview}}">
-    </div>
-    <div class="content">
-      <div class="header">{{post.title}}</div>
-      <div class="meta">
-        <a>Friends</a>
+<div class="ui three column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="/images/avatar/large/daniel.jpg">
       </div>
-      <div class="description">
-        Matthew is an interior designer living in New York.
+      <div class="content">
+        <a class="header">Daniel Louise</a>
       </div>
     </div>
-    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="/images/avatar/large/helen.jpg">
+      </div>
+      <div class="content">
+        <a class="header">Helen Troy</a>
+      </div>
     </div>
   </div>
-  
-</div>
-      
-      
-      
-<!--       <a href="{{post.filepath}}">
-        
-      </a> -->
-
-    {% endunless %} {% endfor %}
-        </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="/images/avatar/large/elliot.jpg">
+      </div>
+      <div class="content">
+        <a class="header">Elliot Fu</a>
+      </div>
+    </div>
   </div>
-</div>
+</div> 
