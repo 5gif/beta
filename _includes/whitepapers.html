@@ -13,7 +13,7 @@
       post in sortedposts limit:5%} {% unless post.draft==true %}
       <div class="col">
         <a href="{{post.filepath}}">
-          <div class="card">
+          <div class="card h-100">
 
             {% if post.preview %} 
               <img src="{{ post.preview }}" class="card-img-top" alt="...">
