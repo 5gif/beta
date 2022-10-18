@@ -15,11 +15,11 @@
         <a href="{{post.filepath}}">
           <div class="card">
 
-            <!-- {% if post.img %} 
-              <img src="{{ post.img }}" class="card-img-top" alt="...">
+            {% if post.preview %} 
+              <img src="{{ post.preview }}" class="card-img-top" alt="...">
               {% else %} 
               <img src="./images/default-image-event1.jpg" class="card-img-top" alt="...">
-            {% endif %} -->
+            {% endif %}
             <!-- <img src="{{ post.img }}" class="card-img-top" alt="..." /> -->
             <div class="card-body">
               <h5 class="card-title fw-bold">{{post.title}}</h5>
