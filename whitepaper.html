@@ -8,8 +8,7 @@ title: Whitepaper
     {% assign sortedposts = site.whitepaper | sort: 'index' | reverse %} {% for post
     in sortedposts %} {% unless post.draft==true %}
     <div class="col">
-      <a href="{{post.url}}">
-        
+      <a href="{{post.filepath}}">
         
          <div class="card">
 
