@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+<script src="/js/d3.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/inspector.css">
+<style>
+    .observablehq {
+        margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 1060px) {
+
+        .observablehq,
+        img {
+            width: 100%;
+        }
+    }
+</style>
+
+<body id="page-top">
+    {% include header.html %}
+
+    <div class="pusher">
+        <div class="ui vertical aligned ">
+            {% include menus.html %}
+            <div class="ui main container  ">
+                <div class="ui piled segment">
+
+                    <a href="https://github.com/5gif/5gif.github.io/edit/{{site.branch}}/{{page.path}}"> <i
+                            class="icon small edit">
+                        </i> </a>
+                    <img class="ui tiny right floated  image" src="{{ page.img }}">
+                    <h1 class="ui header">{{ page.title }}</h1>
+                    <span class="meta">
+                        {{page.summary}}
+                    </span>
+
+                </div>
+                <div class="ui raised  segment ">
+                    {{ content }}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+
+    {% include footer.html %}
+
+</body>
+{% include script.html %}
+
+</html>
