@@ -1,0 +1,99 @@
+---
+layout: tools
+permalink: /tools/p619
+title: ITU-R P.619 Model
+summary: This page has various ITU-R SG3 model implementations
+img: /images/services/itu.png
+---
+
+
+
+<!-- MAIN CONTENT Starts here -->
+
+	<div class="ui three column stackable grid">
+	
+		<div class="column">
+       The P.619 Model is used to predict loss between ground and satellite stations which includes the basic transmission loss as well as the beam spreading and atmospheric gas loss.
+		</div>
+    <div class=" column">
+
+        <div class="ui raised red centered  card ">
+            <div class="   content">
+                <div class="header">Basic transmission loss for single-entry interference</div>
+                <div class="meta">
+                    <span class="date">P.619 - Section 3.3</span>
+                </div>
+                <div class="description">
+The clear-air basic transmission loss not exceeded for 𝑝% time for a single unwanted transmitter and victim receiver over an Earth-space path..</div>
+            </div>
+             <div class="extra content">
+		     <div class="center aligned">
+
+                <button class="button ui icon centered primary" id="btnseme">
+		   Know More
+                    <i class="question icon"></i> 
+                </button>
+		     </div>
+            </div> 
+        </div>
+    </div>
+
+      <div class=" column">
+
+        <div class="ui raised red centered  card ">
+            <div class="   content">
+                <div class="header">Prediction of beam Spreading and Atmospheric Gas Losses
+		</div>
+			<div class="meta">
+                    <span class="date">P.619 - Section x.2</span>
+                </div>
+                <div class="description">
+The clear-air basic transmission loss not exceeded for 𝑝% time for a single unwanted transmitter and victim receiver over an Earth-space path..</div>
+            </div>
+             <div class="extra content">
+                     <div class="center aligned">
+
+                <button class="button ui icon centered primary" id="btngasloss">
+                   Know More
+                    <i class="user icon"></i>
+                </button>
+                     </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="ui text segment">
+    <div id="module">
+        Click one of the Module above ..
+    </div>
+
+</div>
+
+
+
+<script type="module">
+    import { Runtime, Library, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    var el = document.getElementById("module")
+    // new Runtime().module(notebook, Inspector.into(document.body));
+
+
+    import {default as notebook} from "/tools/p619SEME/462467623ed58ad2@247.js";
+    import {default as gas} from "/tools/p619SEME/25b74589d994abea@335.js";
+    document.getElementById("btnseme").onclick=()=>{
+   
+    el.innerHTML=""
+   new Runtime().module(notebook, Inspector.into(el))
+    }
+
+
+    document.getElementById("btngasloss").onclick=()=>{
+    el.innerHTML=""
+    new Runtime().module(gas, Inspector.into(el))
+    }
+
+
+</script>

@@ -1,0 +1,27 @@
+---
+layout: tools
+permalink: /tools/p452
+title: ITU-R P.452 - Prediction of Path Loss
+summary: P.452 Implementation
+img: /images/services/itu.png
+---
+
+<!-- MAIN CONTENT Starts here -->
+
+
+<script type="module">
+    import { Runtime, Library, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import { default as p452 } from "/tools/4e9779d3227a4d58@560.js";
+    var el = document.getElementById("p452model")
+    // new Runtime().module(notebook, Inspector.into(document.body));
+    const p452module = new Runtime().module(p452, Inspector.into(el))
+
+</script>
+<!-- SECTION -->
+<div class="ui red segment">
+    <div id="p452model">
+
+    </div>
+
+
+</div>

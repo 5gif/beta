@@ -1,0 +1,240 @@
+---
+layout: tools
+permalink: /tools/sg3
+title: ITU-R SG3 Models
+summary: This page has various ITU-R SG3 model implementations
+img: /images/services/itu.png
+---
+<script src="/js/d3.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="./semantic_files/container.css"> -->
+<!-- <link rel="stylesheet" type="text/css" href="  ./semantic_files/menu.css"> -->
+<script src="/tools/main.js" type="module"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+
+
+<!-- MAIN CONTENT Starts here -->
+<div class="ui three column stackable grid">
+    <!-- ui three column stackable padded middle aligned centered color grid -->
+
+    <div class="blue  column">
+
+        <div class="ui raised red centered  card ">
+            <div class="avatar image">
+                <img src="">
+            </div>
+            <div class="   content">
+                <a class="header">Kristy</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="description">Kristy is an art director living in New York.</div>
+            </div>
+            <!-- <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div> -->
+        </div>
+    </div>
+    <div class="teal  column">
+
+        <div class="ui centered  card ">
+            <div class="image avatar">
+                <img src="/images/5gif.png">
+            </div>
+            <div class="   content">
+                <a class="header">Kristy</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="description">Kristy is an art director living in New York.</div>
+            </div>
+            <!-- <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div> -->
+        </div>
+    </div>
+
+    <div class=" inverted red column">
+        RED 1
+    </div>
+    <div class=" orange column">Orange 2</div>
+    <div class="inverted green column">green 3 </div>
+
+    <div class="column grey  ">column 4</div>
+    <div class="column grey ">column 5</div>
+    <div class="column blue  ">column 6</div>
+    <div class="column blue  ">column 6</div>
+</div>
+<div class="ui divider"></div>
+
+contents
+<button class="ui primary button" id="btnp2108">
+    P2108
+</button>
+
+<button class="ui primary button" id="parseMD">
+    Get MD
+</button>
+
+<div class="ui icon input">
+    <input type="text" placeholder="Search..." id="somenumber">
+    <i class="search icon"></i>
+</div>
+
+<div class="ui input left labeled">
+    <div class="ui label">
+        repo name
+    </div>
+    <input name="cell" id="command">
+    <!-- <label for="cell">Enter Repo Name</label> -->
+</div>
+
+<div class="ui right labeled input">
+    <input type="text" placeholder="Tx Power" id="scripttext">
+    <div class="ui dropdown label">
+        <div class="text">unit</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item">mW</div>
+            <div class="item">dBm</div>
+            <div class="item">dBW</div>
+        </div>
+    </div>
+</div>
+
+<input type="text" id="somenumber">
+<p id="showing"></p>
+<p id="showing2"></p>
+<div id="everything">
+    This has cumsum of the array
+</div>
+<div>
+    <!-- ui stacked segment -->
+    <button class="ui primary button">
+        Addmore
+    </button>
+    <hr class="ui header">
+    <div class="ui cards four equal stackable doubling flex" id="paper">
+        <div class="ui card">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <a class="header">Kristy</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="description">Kristy is an art director living in New York.</div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div>
+        </div>
+        <div class="ui card">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <a class="header">Kristy</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="description">Kristy is an art director living in New York.</div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div>
+        </div>
+        <div class="ui card">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <a class="header">Radius</a>
+                <!-- <div class="meta">
+                <span class="date">Joined in 2013</span>
+            </div> -->
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="description">Represents coverage spots
+                    <div id="svgdom"></div>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div>
+        </div>
+        <div class="ui card">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <a class="header">Kristy</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="description">Kristy is an art director living in New York.</div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div>
+        </div>
+
+        <div class="ui card">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <a class="header">Radius</a>
+                <div class="meta">
+                    <span class="date">Joined in 2013</span>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="description">Represents coverage spots
+                    <div id="svgdom"></div>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i> 22 Friends
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bslocations">
+
+</div>
+
+
+<div class="ui text segment">
+    <button class="ui primary button" id="generateMap">
+        Save
+    </button>
+    <div id="map" style="height: 500px;width:100%">
+        map goes here
+    </div>
+
+</div>
+<div class="ui piled segment" id="hello">something will appear here</div>
+<div class="ui piled segment" id="p2108model">something will appear here</div>

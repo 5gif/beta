@@ -1,0 +1,250 @@
+:root {
+    --primary: #02a2ff;
+    --light: #c9eafd;
+    --dark: #1a1a1a;
+    /* --font: 'Inter', sans-serif; */
+    /* --font: 'Times New Roman', Times, serif; */
+}
+
+.ui.vertical.backgroung-image {
+    background: url('/images/5GIF\ BG.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.ui.center.aligned.header {
+    margin-bottom: 3rem;
+}
+
+.logo {
+    align-self: flex-end;
+    padding: 0.257143em 1.14285714em;
+}
+
+.ui.navbar-fix {
+    width: 100%;
+    padding: 0% 8%;
+    display: flex;
+    align-items: inherit;
+    flex-direction: inherit;
+    background-color: var(--light);
+}
+
+.navbar {
+    padding: 0% 8%;
+}
+
+.ui.text.home-texts {
+    margin: 10%;
+}
+
+.home-texts h3 {
+    margin-top: 1rem;
+    font-weight: 100;
+    width: 50%;
+}
+
+.container-event {
+    width: 100%;
+    padding: 0 5rem;
+}
+
+/* .ui.middle.aligned.container{
+    margin: 0 5rem;
+} */
+.ui.big.button {
+    margin-top: 15px;
+    background-color: var(--dark);
+    color: white;
+    border: 3px solid var(--dark);
+}
+
+.ui.big.button:hover {
+    margin-top: 15px;
+    /* background-color: ; */
+    color: var(--dark);
+    border: 3px solid var(--dark);
+    background-color: transparent;
+}
+
+.secondary.inverted.pointing.menu {
+    border: 0px;
+    background-color: var(--dark);
+}
+
+.hidden.menu {
+    display: none;
+}
+
+.masthead.segment {
+    min-height: 700px;
+    padding: 1em 0em;
+}
+
+.masthead .logo.item img {
+    margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.masthead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.ui.vertical.stripe {
+    padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+    font-size: 1.28571429em;
+}
+
+.ui.card .image .content {
+    padding: 14px;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.content .content-text {
+    font-size: 0.2rem;
+}
+
+.ui.vertical.stripe .button+h3,
+.ui.vertical.stripe p+h3 {
+    margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+    clear: both;
+}
+
+.social-media-icon {
+    font-size: 2em;
+}
+
+.social-media-icon a {
+    padding: 0em 0.3em;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-media-icon a:hover {
+    color: var(--primary);
+}
+
+.card:hover .primary-color {
+    color: var(--primary);
+    transition: 0.2s ease-in-out all;
+}
+
+#working-grp-sec {
+    background-color: rgb(128, 128, 128, 0.1);
+}
+
+#working-grp-sec .card {
+    background-color: rgb(201, 234, 2530, 0.5);
+}
+
+#suppport-sec {
+    background-color: rgb(201, 234, 253, 0.3);
+}
+
+.btn-know-more .button {
+    margin-bottom: 1em;
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0em;
+}
+
+.ui.cards>.card>.image:not(.ui)>img {
+    border: none;
+    background-color: white;
+}
+
+.quote.stripe.segment {
+    padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.footer.segment {
+    padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .ui.fixed.menu {
+        display: none !important;
+    }
+
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+        display: none;
+    }
+
+    .secondary.pointing.menu .toc.item {
+        display: block;
+    }
+
+    .masthead.segment {
+        min-height: 350px;
+    }
+
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+
+    .ui.tiny.image {
+        width: 60px;
+    }
+
+    .navbar {
+        padding: 0% 2%;
+    }
+
+    .home-texts h3 {
+        margin-top: 1rem;
+        font-weight: 100;
+        width: 80%;
+        font-size: 1em;
+    }
+
+    .ui.big.button {
+        margin-top: 15px;
+        font-size: 15px;
+    }
+
+    .container-event {
+        width: 100%;
+    }
+}

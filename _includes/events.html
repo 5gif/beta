@@ -1,0 +1,51 @@
+<div id="events" class="ui vertical  stripe segment" style="background-color: rgba(165, 165, 165, 0.815)">
+
+
+    <div class="ui container">
+        <div class="ui center huge aligned red header">
+            <!-- <h1 class="ui center aligned header"> Events -->
+            <a href="/events.html" class="ui    "> Events
+                <i class="icon ticket"></i>
+            </a>
+            <!-- </h1> -->
+        </div>
+        <div class="ui two column grid stackable ">
+            <!-- link cards equal -->
+            <!-- <div class="ui three column grid"> -->
+            {% assign sortedposts = site.events | sort: 'index' %} {% for
+            post in sortedposts limit:4%} {% unless post.draft==true %}
+            <div class="column">
+                <div class="ui fluid card" style="height:350px ;">
+                    <a class="image" href="{{post.url}}">
+                        {% if post.img %}
+                        <img src="{{post.img}}">
+                        {% else %}
+                        <img src="./images/default-image-event.jpg">
+                        {% endif %}
+                    </a>
+
+                    <div class="content">
+                        <div class="header"> {{post.title}} </div>
+
+                        <div class="description">
+                            {{post.summary}}
+
+                        </div>
+                    </div>
+
+                    <div class="extra content">
+                        <span class="right floated">{{post.eventDate}} </span>
+                        <i class="icon twitter"></i>
+                    </div>
+
+                </div>
+            </div>
+            {% endunless %} {% endfor %}
+
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+---
+layout: tools
+permalink: /tools/p2108
+title: ITU-R P.2108 - Clutter Loss Model
+summary: This page has various ITU-R SG3 model implementations
+img: /images/services/itu.png
+---
+<script src="/js/d3.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/inspector.css">
+<!-- MAIN CONTENT Starts here -->
+
+
+<script type="module">
+    import { Runtime, Library, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import { default as p2108 } from "/tools/p2108.js";
+    var el = document.getElementById("p2108model")
+    // new Runtime().module(notebook, Inspector.into(document.body));
+    const modP2108 = new Runtime().module(p2108, Inspector.into(el))
+
+</script>
+<!-- SECTION -->
+<div class="ui red segment">
+    <div id="p2108model">
+
+    </div>
+
+
+</div>

@@ -1,0 +1,25 @@
+---
+layout: tools
+permalink: /tools/:title
+title: P.2109 Building Entry Loss Model
+summary: Understanding the Building Entry Loss Model by ITU-R
+img: /images/services/itu.png
+---
+<script src="/js/d3.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/inspector.css">
+<!-- MAIN CONTENT Starts here -->
+
+<script type="module">
+    import { Runtime, Library, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import { default as p2109 } from "/tools/be53922dc85ba17d@608.js";
+    var el = document.getElementById("p2109model")
+    // new Runtime().module(notebook, Inspector.into(document.body));
+    const modp2109 = new Runtime().module(p2109, Inspector.into(el))
+
+</script>
+<!-- SECTION -->
+<div class="ui red segment">
+    <div id="p2109model">
+
+    </div>
+</div>

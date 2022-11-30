@@ -1,0 +1,52 @@
+<div id="whitepaper" class="ui vertical stripe segment">
+    <!-- style="background-image:url(/images/default-whitepaper.png); background-repeat: repeat; background-size: auto  ;background-blend-mode: darken;" -->
+    <div class="ui container">
+        <div class="ui center huge aligned header">
+            <!-- <h1 class="ui center aligned header"> Events -->
+            <a href="/whitepaper.html" class="red"> WhitePapers
+                <i class="icon book"></i>
+            </a>
+
+            <!-- </h1> -->
+        </div>
+
+
+        <div class="ui link four cards flex centered    ">
+            {% assign sortedposts = site.whitepaper | sort: 'index' %}
+            {% for
+            post in sortedposts limit:5%}
+            {% unless post.draft==true %}
+
+            <div class="card">
+                <a class="image" target="_blank" href="{{post.filepath}}">
+                    {% if post.preview %}
+                    <img src="{{post.preview}}">
+                    {% else %}
+                    <img src="./images/default-whitepaper.png">
+                    {% endif %}
+                </a>
+
+                <div class="content">
+                    <a class="header" target="_blank" href="{{post.filepath}}"> {{post.title}} </a>
+                    <div class=" meta">#technical
+                    </div>
+                    <div class="description">
+                        {{post.summary}}
+                    </div>
+                </div>
+
+                <div class="extra content">
+                    <span class="right floated">{{post.release}} </span>
+                    <i class="icon twitter"></i>
+                </div>
+
+            </div>
+            {% endunless %} {% endfor %}
+
+
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,49 @@
+# Site settings
+title: 5G India Forum
+email: contact@5gindiaforum.com
+description: > # this means to ignore newlines until "baseurl:"
+  Primary website for 5GIndiaForum.
+
+banner: nothing
+
+banner5gacia: >
+  <h2>Joint Webinar on "Towards 5G for Industry in India"</h2>
+             <hr>           
+  <p class="text-red">Industrial 5G will play a key role in helping industrial users achieve the goals of Industrial IoT. A core
+                         requirement of Industrial IoT is the ability to connect sensors, devices, equipment, software applications,
+                         manufacturing production processes, workers, and end consumers.
+                     </p>
+                     <p>COAI is organizing a panel discussion with the stakeholders - TSP, Telecom Vendors, Manufacturing industry
+                         players , System Integrations for Industry 4.0 to stimulate and accelerate the digitization road map of the
+                         industries. This brainstorming will help to identify the requirements from OT industry and readiness of
+                         Indian TSP to provide the reliable connectivity infrastructure and services . Globally, different countries
+                         have adopted and developed new policies to enable private networks.</p>
+                 
+                 <a target=_blank
+                 href="https://coaimeetingroom.webex.com/coaimeetingroom/onstage/g.php?MTID=e69a2d7915ff8dc165994531935252533"
+                 class="btn btn-primary btn-xl page-scroll">Register</a>
+
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://5gindiaforum_demo.in/" # the base hostname & protocol for your site
+
+twitter_username: 5gindiaforum
+github_username: 5gif
+linkedin_username: 5g-india-forum/
+
+repon: 5gif.github.io
+branch: spa
+
+collections:
+  whitepaper:
+    output: true
+  events:
+    output: true
+  wgs:
+    output: true    
+  articles:
+    output: true
+  tools:
+    output: true
+
+# Build settings
+markdown: kramdown

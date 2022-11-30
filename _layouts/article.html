@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include header.html %}
+  <div class="pusher">
+    <div class="ui vertical aligned ">
+      {% include menus.html %}
+
+      <div class="ui main container">
+        <div class="ui  segment  ">
+          <img class="ui fluid image" src="{{ page.img }}">
+          <a href="https://github.com/5gif/5gif.github.io/edit/{{site.branch}}/_articles/{{page.name}}"> <i
+              class="icon small edit">
+            </i> </a>
+          <h1 class="ui header"> {{ page.title }} </h1>
+          <div class="ui divider"></div>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+{% include script.html %}
+
+</html>
