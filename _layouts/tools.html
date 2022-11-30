@@ -38,7 +38,14 @@
 
                 </div>
                 <div class="ui raised  segment ">
+                    
+                        {% if post.draft==false %}
                     {{ content }}
+                        {% else %}
+
+                        {% endif %}
+                    
+                    
                 </div>
             </div>
 
