@@ -9,7 +9,7 @@ draft: false
 ---
 
 <div id="observablehq-wrcplot-ad48db77"></div>
-<p>Credit: <a href="https://observablehq.com/d/37fe8d968a5e9cca@160">WRC-23 by ssk</a></p>
+
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
