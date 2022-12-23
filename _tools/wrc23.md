@@ -8,7 +8,8 @@ draft: false
 
 ---
 
-Click on the ranges to see description of the agenda item.
+Click on the ranges to see description of the agenda item. 
+
 <div id="observablehq-viewof-wrcplot-ee862711"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
@@ -24,3 +25,8 @@ new Runtime().module(define, name => {
 # IMT related items
 
 # Satellite Services 
+
+
+# Reference
+
+<a target="_none" href="https://www.itu.int/en/ITU-R/study-groups/rcpm/Pages/wrc-23-studies.aspx"> ITU-R page </a>
