@@ -8,6 +8,7 @@ draft: false
 
 ---
 
+Click on the ranges to see description of the agenda item.
 <div id="observablehq-viewof-wrcplot-ee862711"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
