@@ -15,7 +15,7 @@ Click on the ranges to see description of the agenda item.
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/37fe8d968a5e9cca@287.js?v=3";
+import define from "https://api.observablehq.com/d/37fe8d968a5e9cca.js?v=3";
 new Runtime().module(define, name => {
   if (name === "viewof wrcplot") return new Inspector(document.querySelector("#observablehq-viewof-wrcplot-ee862711"));
 });
