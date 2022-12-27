@@ -47,3 +47,7 @@ collections:
 
 # Build settings
 markdown: kramdown
+
+
+plugins:
+  - jekyll-last-modified-at
