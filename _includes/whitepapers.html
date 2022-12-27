@@ -11,13 +11,13 @@
         </div>
 
 
-        <div class="ui link three stackable cards flex centered  ">
+        <div class="ui link three doubling cards centered  ">
             {% assign sortedposts = site.whitepaper | sort: 'index' %}
             {% for
             post in sortedposts limit:5%}
             {% unless post.draft==true %}
 
-            <div class="ui fluid card">
+            <div class="card">
                 <a class="image" target="_blank" href="{{post.filepath}}">
                     {% if post.preview %}
                     <img src="{{post.preview}}">
