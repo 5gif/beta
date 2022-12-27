@@ -49,5 +49,3 @@ collections:
 markdown: kramdown
 
 
-plugins:
-  - jekyll-last-modified-at
