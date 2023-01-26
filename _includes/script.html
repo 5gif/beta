@@ -25,14 +25,6 @@
                 ;
             $(".ui.dropdown").dropdown();
 
-
-        });
-
-    document.getElementById("loginform").onclick = () => {
-        $(".ui.modal").modal('show');
-    }
-
-
     $('.message .close')
         .on('click', function () {
             $(this)
@@ -41,6 +33,7 @@
                 ;
         });
 
+        
     $.fn.api.settings.debug = false;
     $.fn.api.settings.verbose = true;
     $.fn.api.settings.base = "http://localhost:8080";
