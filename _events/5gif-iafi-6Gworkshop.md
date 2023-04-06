@@ -14,9 +14,12 @@ eventDate: 19 April 2023
 * Date: 19 April 2023
 * Venue: Alof Hotel, Outer Ring Road, Bangalore
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.541529114643!2d77.69300391473998!3d12.93716189087846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13b211fb6477%3A0x572a9b8c15a773b!2sAloft%20Bengaluru%20Outer%20Ring%20Road!5e0!3m2!1sen!2sch!4v1680774599018!5m2!1sen!2sch" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
 ## Registration
 
-<a href="https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html" class="button ui labeled icon">
+<a target="_blank" href="https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html" class="button ui labeled icon">
 Register here <i class="icon user"> </i>
 </a>
 
