@@ -4,7 +4,8 @@ title: Looking Beyond 5G&#58; Future Technology Trends Towards 6G
 summary: A joint workshop organized by 5GIF and ITU-APT Foundation of India on 6G
 name: 6g_event.md
 editlink: https://github.com/5gif/5gif.github.io/edit/devel/_events/6g_event.md
-index: 2
+index: 1
+draft: true
 img: /images/Banner_Industrial_automation_5GACIA_pre_event.jpg
 eventDate: 16 September 2021
 ---
