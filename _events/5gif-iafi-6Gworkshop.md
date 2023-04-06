@@ -4,7 +4,7 @@ title: National Conference on 6G Spectrum, Technology and Standardization by ITU
 summary: A joint workshop organized by 5GIF and ITU-APT Foundation of India on 6G
 name: 5gif-iafi-6Gworkshop.md
 editlink: https://github.com/5gif/5gif.github.io/edit/devel/_events/2021_oct_5gacia.html
-index: 3
+index: 1
 img: https://www.itu-apt.org/system/static/uploads/slider_images/bannernewdesignlogo.png
 eventDate: 19 April 2023
 ---
