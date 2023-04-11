@@ -42,11 +42,34 @@
                 <a class="item">IMT Analysis</a>
                 <a class="item">IMT vs FSS</a>
             </div>
+
         </div>
-        <img class="ui avatar hidden image" src="/images/square-image.png" id="userdp">
-        <button class="ui inverted button" id="loginform">Log in</button>
-        <!-- <a class="ui inverted button">Sign Up</a> -->
+        <div class="ui dropdown icon item  ">
+            <i class="user icon"></i>
+            <!-- 
+            <span class="material-symbols-sharp">
+                signal_cellular_connected_no_internet_4_bar
+            </span> -->
+            <!-- <i class="signal-bars-slash icon"></i> -->
+            <img class="hidden ui   image" src="/images/square-image.png" id="userdp">
+            <div class=" menu">
+                <a class="item" id="loginform"> <i class="key icon"></i> Login </a>
+                <!-- <a class="item"><i class="edit icon"></i> Edit Profile</a> -->
+                <!-- <a class="item"><i class="globe icon"></i> Choose Language</a> -->
+                <a class="item"><i class="settings icon"></i> Account Settings</a>
+                <a class="item"> <i class="sign-out icon"></i> Log Out</a>
+
+            </div>
+
+        </div>
+        <!-- <button class="ui inverted button" id="loginform">Log in</button> -->
+
+        <!-- <img class="ui avatar image" src="/images/square-image.png" id="userdp"> -->
     </div>
+
+
+    <!-- <a class="ui inverted button">Sign Up</a> -->
+</div>
 </div>
 
 <!-- Sidebar Menu -->
@@ -56,33 +79,34 @@
     <a href="/#workgroup" class="item">Workgroups</a>
     <a href="/#members" class="item">Members</a>
     <a href="/#whitepaper" class="item">Whitepaper</a>
-     <div class="header item">
-            Dashboard
-            <i class="dropdown  button icon"></i>
+    <div class="header item">
+        Dashboard
+        <i class="dropdown  button icon"></i>
 
-        </div>
-                <div class="menu " tabindex="-1">
-                <a href="/tools/wrc23" class="item">WRC-23</a>
-                <div class="divider item"></div>
-                <div class="header item">ITU-R Models</div>
-                <div class="item icon ">
-                    <i class="dropdown icon"></i>
-                    SG3 Models
-                    <div class="menu">
-                        <a href="/tools/p2108" class="item">P.2108 </a>
-                        <a href="/tools/p2109" class="item">P.2109 </a>
-                        <a href="/tools/p452" class="item">P.452 </a>
-                        <a href="/tools/p619" class="item">P.619 </a>
-<!--                         <a href="/tools/sg3" class="item">SG3 </a> -->
-                    </div>
-                </div>
-                <div class="divider"></div>
-                <div class="header item ">Sharing Studies
-                      <div class="menu">
-                <a class="item">IMT Analysis</a>
-                          <a class="item">IMT vs FSS</a></div>
-                    </div>
+    </div>
+    <div class="menu " tabindex="-1">
+        <a href="/tools/wrc23" class="item">WRC-23</a>
+        <div class="divider item"></div>
+        <div class="header item">ITU-R Models</div>
+        <div class="item icon ">
+            <i class="dropdown icon"></i>
+            SG3 Models
+            <div class="menu">
+                <a href="/tools/p2108" class="item">P.2108 </a>
+                <a href="/tools/p2109" class="item">P.2109 </a>
+                <a href="/tools/p452" class="item">P.452 </a>
+                <a href="/tools/p619" class="item">P.619 </a>
+                <!--                         <a href="/tools/sg3" class="item">SG3 </a> -->
             </div>
+        </div>
+        <div class="divider"></div>
+        <div class="header item ">Sharing Studies
+            <div class="menu">
+                <a class="item">IMT Analysis</a>
+                <a class="item">IMT vs FSS</a>
+            </div>
+        </div>
+    </div>
     <a href="#" class="item">Contact</a>
 </div>
 
@@ -95,12 +119,12 @@
             <form method="post" action="" class="ui form">
                 <div class="ui labeled fluid input ">
                     <div class="ui label">First Name</div>
-                    <input type="text" name="first-name" placeholder="First Name">
+                    <input type="text" name="first-name" placeholder="First Name" autocomplete="username">
                 </div>
                 <br>
                 <div class="ui labeled fluid input ">
                     <div class="ui label">Password</div>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" autocomplete="current-password">
                 </div>
                 <div class="ui divider"></div>
                 <a class="ui fluid button" id="fbsignin"> Submit
