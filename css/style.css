@@ -6,11 +6,19 @@
     /* --font: 'Times New Roman', Times, serif; */
 }
 
-.ui.vertical.backgroung-image {
+/* .ui.vertical.backgroung-image {
     background: url('/images/5GIF\ BG.png');
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
+    min-height: 100vh;
+} */
+
+.backgroung-image {
+    background: url('/images/event4.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    /* background-size: cover; */
     min-height: 100vh;
 }
 
@@ -79,7 +87,7 @@
 }
 
 .masthead.segment {
-    min-height: 700px;
+    min-height: 500px;
     padding: 1em 0em;
 }
 
