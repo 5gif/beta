@@ -1,0 +1,393 @@
+---
+layout: tools
+permalink: /tools/:title
+title: Dashboard Trial
+summary: This is to test various 5GIF developed tools
+img: /images/cogs-png.png
+draft: false
+---
+<script src="/localkey.js">
+    console.log("Logged localkey");
+</script>
+<script src="/tools/dashboard.js" type="module">
+    console.log("Firebase module loaded");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+
+
+<script>
+    var authtoken;
+    // function loadModel() {
+    //     d3.json('/obs', { headers: { "Authorization": "Bearer " + authtoken } }).then(data => {
+    //         console.log(data)
+    //         window.location.href = "/models"
+    //     });
+    //     // d3.html('/obs', { headers: { "Authorization": "Bearer " + authtoken } }).then(data => {
+    //     //     console.log(data)
+    //     // });
+    // }
+
+</script>
+
+
+<div class="ui olive message hidden">
+    <i class="close icon"></i>
+    <div class="header">
+        Welcome back!
+    </div>
+    <p id="notification">This is a special notification which you can dismiss if you're bored with it.</p>
+</div>
+<div class="ui container">
+
+
+    <div class="ui grid three column stackable">
+        <div class="column">
+
+            <button class="ui primary  button" id="loadlayout">Load Layout</button>
+
+            <div class="ui basic  container">
+                <div class="ui header">
+                    Load some data from backend
+                </div>
+                <button class="ui primary  button" id="loadme">Click Me</button>
+                <button class="ui  button" id="click2">Load MD</button>
+                <button class="ui  button" id="click3">Test API</button>
+                <div class="ui label button" id="statecontext">
+                    Hello
+                </div>
+
+                <div class="ui action input" id="npoints2">
+                    <input type="number" placeholder="Search...">
+                    <button class="ui button">Search</button>
+                </div>
+
+                <div class="ui input icon  search labelled" id="npoints">
+                    <i class="icon search"></i>
+                    <input type="text">
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="column  ">Hello 2
+
+            <div class="ui input">
+
+                <input type="text" class="ui input" id="textline">
+            </div>
+
+
+            <div id="textcolumn">
+
+            </div>
+
+        </div>
+        <div class="column ">
+            <div class="header ui">Variables</div>
+            <div class="ui stacked segment" style="overflow:scroll; max-height:200px;">
+                <div id="nodes">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider ui"></div>
+    <div class="ui   segment">
+        <div id="plotarea" style="width: 100%;">
+        </div>
+        <div id="nodelayout" style="width: 100%;">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<script type=" module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp, getApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            //"firebase/app";
+            import { getDatabase, get, ref, onValue } from
+            "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
+            import { getAuth, signInWithEmailAndPassword, signOut } from
+            "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+            // import { getAnalytics } from "firebase/analytics";
+            // import * as Plot from "https://cdn.skypack.dev/@observablehq/plot@0.6";
+
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            // Initialize Firebase
+            const app = getApp();
+            // const analytics = getAnalytics(app);
+            const auth = getAuth();
+
+            const db = getDatabase();
+            const starCountRef = ref(db, 'users');
+
+            onValue(starCountRef, (snapshot) => {
+            const data = snapshot.val();
+            console.log("RTDB Value changed ", data);
+            // updateStarCount(postElement, data);
+            $(".ui.message")[0].classList.remove("hidden", "transition");
+            // document.getElementById("notification").innerText = "New value " + JSON.stringify(data)
+            document.getElementById("notification").innerText = "New value " + JSON.stringify(data.length)
+            nodes.define("nodes", data);
+            // PlotMe(data);
+            });
+
+            document.getElementById("loadme").onclick = () => {
+            const starCountRef = ref(db, 'users');
+
+            // onValue(starCountRef, (snapshot) => {
+            // const data = snapshot.val();
+            // console.log("RTDB Value changed ", data);
+            // // updateStarCount(postElement, data);
+            // PlotMe(data);
+            // });
+
+
+            // //get(ref(db, basepath+"/log/bootevents/currentversion"))
+            // get(ref(db, "/users/")).then((snapshot) => {
+            // if (snapshot.exists()) {
+            // console.log("Data is ", snapshot.val());
+            // PlotMe(snapshot.val());
+            // }
+            // });
+            }
+            auth.onAuthStateChanged(user => {
+            if (user == null) {
+            document.getElementById("loadme").classList.add("loading", "disabled");
+
+            } else {
+            document.getElementById("loadme").classList.remove("loading", "disabled");
+
+            }
+            })
+
+            function PlotMe(data) {
+            console.log("Plotme : arg data ", data);
+            var maxwidth = document.getElementById("plotarea").clientWidth;
+            var offset = Math.random() * 100
+            var options = {
+            marks: [
+
+            // Plot.dot([10, 30, 50], {
+            // y: d => d + offset, x: (_, i) => i
+            // })
+            Plot.dot(data, {
+            x: "X", y: "Y", fill: d => "red"
+            })
+            ],
+            width: maxwidth,
+            grid: true
+            };
+            var pltobj = Plot.plot(options);
+            document.getElementById("plotarea").innerHTML = "";
+            document.getElementById("plotarea").append(pltobj);
+            // console.log(pltobj)
+            // return pltobj;
+
+            }
+
+            // ACTIVE updates
+
+
+
+
+            import { Runtime, Library, Inspector } from
+            "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            const runtime = new Runtime();
+            const module = runtime.module();
+
+            // save standard parser to global for future use
+            module.variable({
+            fulfilled: v => {
+            console.log("Loaded.. md and tex");
+            window.tex = v[0];
+            window.md = v[1];
+
+            }
+            }).define(["tex", "md"], (r1, r2) => [r1, r2]);
+            var nodes = module.variable(new Inspector(document.getElementById("nodes")));
+
+            module.variable({
+            fulfilled: v => {
+            console.log("Plotfn Inspector ", v, " of type ", typeof v)
+            PlotMe(v);
+            }
+            }).define(["nodes"], d => {
+            console.log("Dependency on nodes changed...");
+            return d;
+            });
+
+            document.getElementById("textline").onchange = (ev) => {
+            var r = 39;
+            var mdtxt = md`# hello world \n **${r}**`
+            console.log(ev.target.value)
+            mdtxt = md`${ev.target.value}`;
+            document.getElementById("textcolumn").innerHTML = ""
+            document.getElementById("textcolumn").append(mdtxt);
+            }
+            document.getElementById("click2").onclick = () => {
+            var r = 39;
+            var mdtxt = md`# hello world \n **${r}**`
+            document.getElementById("textcolumn").innerHTML = ""
+            document.getElementById("textcolumn").append(mdtxt);
+            document.getElementById("textcolumn").append(UIinput([0, 100]));
+            document.getElementById("textcolumn").append(UIinputV3([0, 10],
+            {
+            type: "power",
+            name: "TxPower ",
+            label: "This is bs transmit power",
+            unit: "mW",
+            value: 200, postcall: (d, v) => console.log("post call", d, v)
+            },
+            "number"
+            ));
+            //
+
+            }
+
+            // import { genericInputv3 } from "https://api.observablehq.com/@wiless/units"
+
+            // IMPORT wiless units
+            import { default as wiless } from "https://api.observablehq.com/@wiless/units.js?v=3";
+            // import { default as p2108 } from "./p2108.js";
+            var wilessunitsobs = (varname) => {
+            if (varname == "genericInputv3") {
+            // console.log("NAME :", varname);
+            return {
+            fulfilled: v => {
+            // console.log(`fulfilled: ${varname} : ${v}`);
+            window.UIinputV3 = v;
+            }
+            }
+            }
+            if (varname == "genericInput") {
+            // console.log("NAME :", varname);
+            return {
+            fulfilled: v => {
+            // console.log(`fulfilled: ${varname} : ${v}`);
+            window.UIinput = v;
+            }
+            }
+            }
+            if (varname == "UIInputs") {
+            // console.log("NAME :", varname);
+            return {
+            fulfilled: v => {
+            console.log(`fulfilled: ${varname} : ${v}`);
+            window.UIInputs = v;
+            }
+            }
+            }
+            if (varname == "number") {
+            // console.log("NAME :", varname);
+            return {
+            fulfilled: v => {
+            // console.log(`fulfilled: ${varname} : ${v}`);
+            window.UInumber = v;
+            }
+            }
+            }
+            if (varname == "range") {
+            // console.log("NAME :", varname);
+            return {
+            fulfilled: v => {
+            window.UIrange = v;
+            }
+            }
+            }
+            }
+
+            var wilessunits = runtime.module(wiless, wilessunitsobs);
+            // , $('#npoints2 input').value,
+            $('#npoints2 button').api({
+            action: 'get hexrandu',
+            stateContext: '#npoints2 button',
+            data: {
+            N: 19
+            },
+            beforeSend: a => {
+            console.log("API before send : ", a);
+            console.log("API data : ", $('#npoints2 input').value);
+            a.data.N = document.querySelector('#npoints2 input').valueAsNumber;
+
+            return a
+            },
+            onSuccess: d => {
+            nodes.define("nodes", d)
+            console.log('done', d)
+            }
+            });
+            // $('#npoints').api('get request').then(d => console.log('done'));
+            $('#click3').api({
+
+            // url: 'https://wilessapi.appspot.com/geom/hexgrid',
+            // on: 'now',
+            action: 'get hexgrid', onResponse: function (response) {
+            // valid response and response.success = true
+            console.log("On Response is ", response)
+            var result = [];
+            var keys = Object.keys(response)
+            result = d3.map(keys, k => ({ ...response[k], cellid: k }))
+            return result;
+            },
+            onSuccess: function (response) {
+            // valid response and response.success = true
+            // nodes.define(response);
+            nodes.define("nodes", response);
+            console.log("FINAL nodes are ", response);
+            }, beforeXHR: function (xhr) {
+            // adjust XHR with additional headers
+            xhr.setRequestHeader('Authorization', 'Basic XXXXXX');
+            console.log("xhr ", xhr)
+            return xhr;
+            },
+            // on: 'mouseenter',
+            data: {
+            N: 57,
+            Radius: 1000
+            },
+            beforeSend: a => {
+
+            console.log(a);
+            console.log("API before send : ", a);
+            // a.url = 'http://localhost:8080/geom/hexranduV2/';
+            // a.method = 'POST';
+
+            console.log("API before send : ", a.method, a.url);
+            return a;
+            },
+            // stateContext: '#statecontext'
+            })
+
+            
+
+            </script>
+
+<script type="module" src="layout.js">
+
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+
+    // https://wilessapi.appspot.com/geom/hexgrid
+
+    $(document)
+
+        .ready(function () {
+
+
+        })
+
+
+
+
+</script>

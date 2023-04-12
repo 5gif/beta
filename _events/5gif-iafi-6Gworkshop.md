@@ -4,10 +4,10 @@ title: National Conference on 6G Spectrum, Technology and Standardization by ITU
 summary: A joint workshop organized by 5GIF and ITU-APT Foundation of India on 6G
 name: 5gif-iafi-6Gworkshop.md
 index: 2
-img: https://www.itu-apt.org/system/static/uploads/slider_images/bannernewdesignlogo.png
+img: images/event4.png
 eventDate: 19 April 2023
 ---
-
+w
 ## Event Details
 
 * Date: 19 April 2023
@@ -18,7 +18,7 @@ eventDate: 19 April 2023
 
 ## Registration
 
-<a target="_blank" href="https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html" class="button ui labeled icon">
+<a target="_blank" href="https://www.itu-apt.org/event/registration/1678694901" class="button ui labeled icon">
 Register here <i class="icon user"> </i>
 </a>
 
@@ -30,4 +30,7 @@ As 5G is rolled out in India at a lightning pace, its usage will further expand 
 ## Detailed Agenda
 
 See the event page..
+https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html 
+
+
 

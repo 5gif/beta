@@ -1,8 +1,9 @@
-<div class="ui top secondary fixed inverted pointing menu navbar">
+<div class="ui top secondary fixed  inverted pointing menu navbar" id="menu-secondary">
     <a class="toc item">
         <i class="sidebar icon"></i>
     </a>
-    <a class="logo" href="/"><img class="ui tiny image" src="/images/5gif.png" alt="Company logo"></a>
+    <a class="logo" href="/"><img class="ui tiny image" src="/images/5gif.png" alt="5GIF logo"></a>
+    <!--  -->
     <div class="right item">
         <div class="ui dropdown item  ">
             About
@@ -57,7 +58,7 @@
                 <!-- <a class="item"><i class="edit icon"></i> Edit Profile</a> -->
                 <!-- <a class="item"><i class="globe icon"></i> Choose Language</a> -->
                 <a class="item"><i class="settings icon"></i> Account Settings</a>
-                <a class="item"> <i class="sign-out icon"></i> Log Out</a>
+                <a class="item disabled" id="signout"> <i class="sign-out   icon"></i> Log Out</a>
 
             </div>
 
@@ -118,8 +119,8 @@
             <div class="ui header">Login</div>
             <form method="post" action="" class="ui form">
                 <div class="ui labeled fluid input ">
-                    <div class="ui label">First Name</div>
-                    <input type="text" name="first-name" placeholder="First Name" autocomplete="username">
+                    <div class="ui label">User Name</div>
+                    <input type="text" name="email" placeholder="UserName/email" autocomplete="username">
                 </div>
                 <br>
                 <div class="ui labeled fluid input ">
