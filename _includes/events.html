@@ -9,13 +9,15 @@
             </a>
             <!-- </h1> -->
         </div>
-        <div class="ui two column grid stackable ">
+        <div class="ui one column grid stackable" style="background-image:url('/images/event4.png');">
             <!-- link cards equal -->
             <!-- <div class="ui three column grid"> -->
+                
             {% assign sortedposts = site.events | sort: 'index' %} {% for
             post in sortedposts limit:4%} {% unless post.draft==true %}
             <div class="column">
-                <div class="ui fluid card" style="height:350px ;">
+                
+                <div class="ui centered card">
                     <a class="image" href="{{post.url}}">
                         {% if post.img %}
                         <img src="{{post.img}}">

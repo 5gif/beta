@@ -10,16 +10,35 @@
 ></script>
 <script>
   $(document).ready(function () {
+    console.log("Document is ready");
     // fix menu when passed
-    $(".masthead").visibility({
-      once: false,
-      onBottomPassed: function () {
-        $(".fixed.menu").transition("fade in");
-      },
-      onBottomPassedReverse: function () {
-        $(".fixed.menu").transition("fade out");
-      },
-    });
+
+    // $('.masthead')
+    //     .visibility({
+    //         once: false,
+    //         onBottomPassed: function () {
+    //             console.log("bottom passed");
+    //             console.log("hiding...");
+
+    //             console.log("showing...");
+    //             $('#stickymenu').removeClass('hidden')
+    //             $('#stickymenu').transition('fade in');
+    //             // $("#menu-secondary").addClass('hidden');
+    //             $("#menu-secondary").transition('fade out')
+    //             // $('#stickymenu').transition('slide up');
+
+    //         },
+    //         onBottomPassedReverse: function () {
+    //             console.log("bottom passed reverse")
+    //             console.log("showing secondary...");
+    //             $("#menu-secondary").show();
+    //             console.log("hide sticky menu...");
+    //             // $('#stickymenu').hide();
+    //             $('#stickymenu').addClass('hidden')
+    //             // $("#menu-secondary").transition('fade in');
+    //             // $('#stickymenu').transition('fade out');
+    //         }
+    //     });
 
     // create sidebar and attach to menu open
     $(".ui.sidebar").sidebar("attach events", ".toc.item");
@@ -52,3 +71,29 @@
     });
   });
 </script>
+
+<script type="module">
+  // // Import the functions you need from the SDKs you need
+  import {
+    getApps,
+    initializeApp,
+  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+
+  console.log("Current apps", getApps());
+  import {
+    getAuth,
+    onAuthStateChanged,
+  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+
+  var apps = getApps();
+  console.log("Current apps", apps);
+  if (apps.length > 0) {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => console.log("Script User is ", user));
+  }
+</script>
+
+<script src="/localkey.js">
+  console.log("Logged localkey");
+</script>
+<script src="js/fbsignin.js" type="module"></script>
