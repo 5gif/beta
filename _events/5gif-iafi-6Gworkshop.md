@@ -29,7 +29,11 @@ As 5G is rolled out in India at a lightning pace, its usage will further expand 
 ## Detailed Agenda
 
 See the event page..
-https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html 
+
+<a target="_blank" href="https://nationconferenceon6gspectrumtechnologies.itu-apt.org/index.html" class="button ui labeled icon">
+Event Page <i class="icon user"> </i> </a>
+
+
 
 
 
