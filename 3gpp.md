@@ -13,5 +13,4 @@ Telecommunication Standards Development Society, India (TSDSI) and 5G Industry F
 
 
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHe454oPYiqL_gs40EPPXQnXo35WDn9zy5bNVd1WGTKV2ivw/viewform?embedded=true" width="640" height="2840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHe454oPYiqL_gs40EPPXQnXo35WDn9zy5bNVd1WGTKV2ivw/viewform?embedded=true" width="100%"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
