@@ -11,6 +11,7 @@ Meetings At Bengaluru, India
 Telecommunication Standards Development Society, India (TSDSI) and 5G Industry Forum (5GIF) are pleased to invite you to the 3GPP SA#101,
 3GPP RAN#101 and 3GPP CT#101 meetings in Bengaluru, India.
 
-<pre>Visa Invitation forms will be updated soon</pre>
 
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfHe454oPYiqL_gs40EPPXQnXo35WDn9zy5bNVd1WGTKV2ivw/viewform?embedded=true" width="640" height="2840" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
