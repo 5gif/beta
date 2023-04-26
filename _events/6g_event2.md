@@ -6,7 +6,7 @@ name: 6g_event.md
 editlink: https://github.com/5gif/5gif.github.io/edit/devel/_events/6g_event2.md
 index: 1
 img: ../images/Banner_Industrial_automation_5GACIA_pre_event.jpg
-draft: true
+draft: false
 eventDate: 16 September 2021
 ---
 
