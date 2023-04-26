@@ -15,7 +15,7 @@
                 
             {% assign sortedposts = site.events | sort: 'index' %} {% for
             post in sortedposts limit:4%} {% unless post.draft==true %}
-            <div class="column">
+            <div class="one wide column">
                 
                 <div class="ui centered card">
                     <a class="image" href="{{post.url}}">
