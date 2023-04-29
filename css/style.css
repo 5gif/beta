@@ -16,14 +16,7 @@
   background-size: contain;
 }
 
-/* .backgroung-image {
-    background: url('/images/event4.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-    min-height: 100vh;
-} */
-
+ 
 .ui.center.aligned.header {
   margin-bottom: 3rem;
 }
@@ -89,9 +82,11 @@
   /* display: none;s */
 }
 
-.masthead.segment {
+.masthead  {
+  margin-top: 10%;
   min-height: 500px;
-  padding: 1em 0em;
+  /* padding: 1em 0em; */
+  padding: 20px;
 }
 
 .masthead .logo.item img {
@@ -102,16 +97,18 @@
   margin-left: 0.5em;
 }
 
-.masthead h1.ui.header {
+/* .masthead h1.ui.header {
   margin-top: 3em;
   margin-bottom: 0em;
   font-size: 4em;
   font-weight: normal;
-}
+} */
 
-.masthead h2 {
+.masthead p {
+  
   font-size: 1.7em;
   font-weight: normal;
+  color: azure;
 }
 
 .ui.vertical.stripe {
@@ -273,5 +270,23 @@
   @keyframes blinker {
     50% {
       opacity: 0;
+    }
+  }
+
+  .mr-10 {
+    margin-right: 10px;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .form-wrapper {
+    width: 75%
+  }
+
+  @media only screen and (max-width: 800px) { 
+    .form-wrapper {
+      width: 100%
     }
   }
