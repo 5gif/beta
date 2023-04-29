@@ -7,15 +7,13 @@
 }
 
 .ui.vertical.backgroung-image {
-  background: url(/images/banner1.png);
+  background: url(/images/5gmobiletowers.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: con;
   min-height: 100vh;
   background-color: #2b0e57;
-  background-size: contain;
+  background-size: cover;
 }
-
  
 .ui.center.aligned.header {
   margin-bottom: 3rem;
