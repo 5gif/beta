@@ -9,13 +9,13 @@
             </a>
             <!-- </h1> -->
         </div>
-        <div class="ui three column grid stackable">
+        <div class="ui link three doubling cards centered  ">
             <!-- link cards equal -->
             <!-- <div class="ui three column grid"> -->
                 
-            {% assign sortedposts = site.events | sort: 'index' %} {% for
+            {% assign sortedposts = site.events | sort: 'index' | reverse %} {% for
             post in sortedposts limit:4%} {% unless post.draft==true %}
-            <div class="one wide column">
+             
                 
                 <div class="ui centered card">
                     <a class="image" href="{{post.url}}">
@@ -41,7 +41,7 @@
                     </div>
 
                 </div>
-            </div>
+           
             {% endunless %} {% endfor %}
 
 
