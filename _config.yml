@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Primary website for 5GIndiaForum.
 
 banner: nothing
+bannerimage: /images/banner1.png 
 
 banner5gacia: >
   <h2>Joint Webinar on "Towards 5G for Industry in India"</h2>
