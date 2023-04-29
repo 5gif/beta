@@ -3,10 +3,10 @@ layout: events
 title: Looking Beyond 5G&#58; Future Technology Trends Towards 6G
 summary: A joint workshop organized by 5GIF and ITU-APT Foundation of India on 6G
 name: 6g_event.md
-editlink: https://github.com/5gif/5gif.github.io/edit/devel/_events/6g_event.md
-index:2
+editlink: https://github.com/5gif/5gif.github.io/edit/devel/_events/6g_event2.md
+index: 2
+img: ../images/Banner_Industrial_automation_5GACIA_pre_event.jpg
 draft: false
-img: /images/Banner_Industrial_automation_5GACIA_pre_event.jpg
 eventDate: 16 September 2021
 ---
 
@@ -31,7 +31,7 @@ But what will happen afterwards? With the speed in which technology moves, it is
 
 ## Speakers
 
-{:class="ui padded table table-bordered"}
+{:class="table table-bordered"}
 | Speaker | Title and Organization |
 |-------|--------|
 | Mario Maniewicz | Director Radiocommunication Bureau, ITU |
@@ -57,12 +57,12 @@ But what will happen afterwards? With the speed in which technology moves, it is
 
 ## Presentations
 
-- [Presentation by Hakan Ohlsen]({{ site.baseurl }}files/6g_event/Hakan.pdf)
-- [Presentation by Prof. Ramjee Prasad]({{ site.baseurl }}files/6g_event/Prof.%20Ramjee%20Prasad.pdf)
-- [Presentation by Magnus Frodign]({{ site.baseurl }}files/6g_event/Magnus%20Frodigh.pptx)
-- [Presentation by Halim Yanikomeroglu]({{ site.baseurl }}files/6g_event/ATU_APT-6G_B6G_HAPS-HalimYanikomeroglu-16Sep2021%20(2).pptx)
-- [Presentation by Reza Arefi]({{ site.baseurl }}files/6g*event/2021_09_16*(Reze)IAFI-5GIF%20workshop_Intel_final%20(1).pdf)
-- [Presentation by Mario Maniewicz]({{ site.baseurl }}files/6g_event/Slides%20Mario%20Maniewicz%20Dir%20BR%20-%20Copy.pdf)
-- [Presentation by Dr. Iwao Hosako]({{ site.baseurl }}files/6g_event/Dr%20Hosako.pdf)
-- [Presentation by HyeonWoo Lee]({{ site.baseurl }}files/6g_event/IAFI_5GIF_Korea_20210916_R1.pdf)
-- [Presentation by Willcock Colin]({{ site.baseurl }}files/6g_event/IAFI%20and%205G%20India%20SNS%20Intro%2C%20(Colin)%20%20Sept%202021%20-%20Colin%20Willcock.pdf)
+- [Presentation by Hakan Ohlsen]({{ site.baseurl }}/files/6g_event/Hakan.pdf)
+- [Presentation by Prof. Ramjee Prasad]({{ site.baseurl }}/files/6g_event/Prof.%20Ramjee%20Prasad.pdf)
+- [Presentation by Magnus Frodign]({{ site.baseurl }}/files/6g_event/Magnus%20Frodigh.pptx)
+- [Presentation by Halim Yanikomeroglu]({{ site.baseurl }}/files/6g_event/ATU_APT-6G_B6G_HAPS-HalimYanikomeroglu-16Sep2021%20(2).pptx)
+- [Presentation by Reza Arefi]({{ site.baseurl }}/files/6g*event/2021_09_16*(Reze)IAFI-5GIF%20workshop_Intel_final%20(1).pdf)
+- [Presentation by Mario Maniewicz]({{ site.baseurl }}/files/6g_event/Slides%20Mario%20Maniewicz%20Dir%20BR%20-%20Copy.pdf)
+- [Presentation by Dr. Iwao Hosako]({{ site.baseurl }}/files/6g_event/Dr%20Hosako.pdf)
+- [Presentation by HyeonWoo Lee]({{ site.baseurl }}/files/6g_event/IAFI_5GIF_Korea_20210916_R1.pdf)
+- [Presentation by Willcock Colin]({{ site.baseurl }}/files/6g_event/IAFI%20and%205G%20India%20SNS%20Intro%2C%20(Colin)%20%20Sept%202021%20-%20Colin%20Willcock.pdf)
