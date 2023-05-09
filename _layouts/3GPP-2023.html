@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU"></script>
+  <script type="module" src="/js/3GPP-2023.js"></script>
+
+
+  <body id="page-top">
+    {% include header.html %}
+
+    <div class="pusher">
+      <div class="ui vertical aligned">
+        {% include menus.html %}
+
+        <div class="grid container" style="background-color: black">
+          <!-- slider container -->
+          <div id="slider" class="slider">
+            <img src="../images/3gpp_1.jpg" />
+            <img src="../images/banner1.png" />
+            <img src="../images/banner2.png" />
+            <div
+              class="ui text"
+              style="
+                background-color: rgb(0 0 0 / 43%);
+                z-index: 9;
+                height: inherit;
+                width: 80%;
+                height: 30%;
+                color: white;
+                padding: 10px;
+                /* margin-top: 10px; */
+                /* opacity: 0.7; */
+                border-radius: 10px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                top: 30%;
+                position: absolute;
+              "
+            >
+              <h3 class="ui header inverted">
+                5G India Forum is an industry collaborative forum, was
+                established to enable synergizing the national efforts and play
+                a significant role in shaping the strategic, commercial and
+                regulatory development of the 5G ecosystem in India.
+              </h3>
+              
+            </div>
+          </div>
+        </div>
+        <div class="ui grid container">
+          <div class="thirteen wide olive column section-first">
+            <h1>Visa support letter</h1>
+            <h2>
+              The 5GIF and TSDSI welcomes delegates for the 3GPP SA#101, 3GPP RAN#101 and 3GPP CT#101 meetings during Sep 2023, in Bangalore.
+            </h2>
+            <h5>
+              Please complete the form below and submit for us to process your Visa support letter.
+            </h5>
+          </div>
+          <div class="three wide olive column logo-wrapper section-second">
+            <div class="ui middle aligned centered small image">
+              <img src="../images/3gpp_logo.png" />
+            </div>
+          </div>
+        </div>
+        <div class="mb-20 mt-30">
+          <div class="ui grid container raised segment">
+            <div class="ui column form-wrapper mb-20 mt-20">
+              <form class="ui form 3gpp-visa" id="visa-apply">
+                <h4 class="ui dividing header">Personal details</h4>
+                <div class="fields">
+                  <div class="two wide field">
+                    <label>Mr./Ms.</label>
+                    <select name="title" class="ui fluid dropdown">
+                      <option value="">Select</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Ms.">Ms.</option>
+                    </select>
+                  </div>
+                  <div class="required seven wide field">
+                    <label>First Name (As given in passport) </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="required seven wide field">
+                    <label>Last Name (As given in passport) </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                </div>
+
+                <div class="three fields">
+                  <div class="required field">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Email" />
+                  </div>
+                  <div class="required field">
+                    <div class="ui date required">
+                      <label>Date of birth</label>
+                      <input type="date" name="dob" placeholder="dd/mm/yyyy" />
+                    </div>
+                  </div>
+
+                  <div class="required field">
+                    <label>Nationality </label>
+                    <input
+                      type="text"
+                      name="nationality"
+                      placeholder="Nationality"
+                    />
+                  </div>
+                </div>
+
+                <h4 class="ui dividing header">Passport details</h4>
+                <div class="two fields">
+                  <div class="required field">
+                    <label>Passport number </label>
+                    <input
+                      type="text"
+                      name="passportNumber"
+                      placeholder="Passport Number"
+                    />
+                  </div>
+                  <div class="required field">
+                    <label>Place of issue </label>
+                    <input
+                      type="text"
+                      name="passportIssuePlace"
+                      placeholder="Place of issue"
+                    />
+                  </div>
+                </div>
+                <div class="two fields">
+                  <div class="required field">
+                    <div class="ui date">
+                      <label>Passport date of issue</label>
+                      <input
+                        type="date"
+                        name="passportIssueDate"
+                        placeholder="dd/mm/yyyy"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="required field">
+                    <div class="ui date">
+                      <label>Passport validity date</label>
+                      <input
+                        type="date"
+                        name="passportValidityDate"
+                        placeholder="dd/mm/yyyy"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="ui dividing header">Meeting details</h4>
+                <div class="two fields">
+                  <div class="required field">
+                    <label>Representing 3GPP IM Name </label>
+                    <input
+                      type="text"
+                      name="representingName"
+                      placeholder="Representing 3GPP IM Name"
+                    />
+                  </div>
+                </div>
+                <div class="required field">
+                  <label> Participating Meeting</label>
+                </div>
+                <div class="three fields">
+                  <div class="ui checkbox field">
+                    <input
+                      type="checkbox"
+                      name="SA_101_bangalore"
+                      id="SA_101_bangalore"
+                    />
+                    <label>SA#101</label>
+                  </div>
+                  <div class="ui checkbox field">
+                    <input
+                      type="checkbox"
+                      name="CT_101_bangalore"
+                      id="CT_101_bangalore"
+                    />
+                    <label>CT#101</label>
+                  </div>
+                  <div class="ui checkbox field">
+                    <input
+                      type="checkbox"
+                      name="RAN_101_bangalore"
+                      id="RAN_101_bangalore"
+                    />
+                    <label>RAN#101</label>
+                  </div>
+                </div>
+
+                <h4 class="ui dividing header">Hotel Reservation details</h4>
+                <div class="three fields">
+                  <div class="required field">
+                    <label>Select Hotel </label>
+                    <select name="hotelName" class="ui fluid dropdown">
+                      <option value="">Select Hotel</option>
+                      <option value="Bengaluru Marriott Hotel">
+                        Bengaluru Marriott Hotel
+                      </option>
+                      <option value="Sheraton Grand Bangaluru">
+                        Sheraton Grand Bangaluru
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label>Notes</label>
+                  <textarea
+                    name="notes"
+                    placeholder="Notes"
+                    rows="2"
+                  ></textarea>
+                </div>
+
+                <div class="ui checkbox">
+                  <input type="checkbox" name="isPhysicalCopyRequired" />
+                  <label>
+                    Please check if you are required to submit a physical copy
+                    of the Invite letter.</label
+                  >
+                </div>
+                <div class="six fields">
+                  <div class="field" style="margin-top: 10px">
+                    <button class="ui primary button" type="submit">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div class="ui negative message display-none" id="error-event">
+                <i class="close icon"></i>
+                <div class="header" id="error-event-msg">
+                  Something went wrong! Try again later.
+                </div>
+              </div>
+              <div class="ui positive message display-none" id="success-event">
+                <i class="close icon"></i>
+                <div class="header" id="error-event-msg">
+                  Application submitted successfully
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </body>
+  {% include script.html %}
+  <script>
+    // sider js
+    const slider = document.getElementById("slider");
+    const images = slider.querySelectorAll("img");
+
+    let i = 0;
+    setInterval(function () {
+      if (i == 0) {
+        images[i].className = "fade-in-image";
+        // images[i].className = "fade-out-image";
+      } else if (i == images.length) {
+        images[i - 1].className = "fade-out-image";
+        images[0].className = "fade-in-image";
+        i = 0;
+      } else {
+        images[i - 1].className = "fade-out-image";
+        images[i].className = "fade-in-image";
+      }
+      i++;
+    }, 2000);
+  </script>
+</html>

@@ -14,7 +14,15 @@
   background-color: #2b0e57;
   background-size: cover;
 }
- 
+
+/* .backgroung-image {
+    background: url('/images/event4.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    min-height: 100vh;
+} */
+
 .ui.center.aligned.header {
   margin-bottom: 3rem;
 }
@@ -80,7 +88,7 @@
   /* display: none;s */
 }
 
-.masthead  {
+.masthead {
   margin-top: 10%;
   min-height: 500px;
   /* padding: 1em 0em; */
@@ -103,7 +111,6 @@
 } */
 
 .masthead p {
-  
   font-size: 1.7em;
   font-weight: normal;
   color: azure;
@@ -253,38 +260,118 @@
   .container-event {
     width: 100%;
   }
+ 
 }
+
 .upcoming-wrapper {
-    background-color: #0b0a0ac4;
-    color: white;
-    text-align: center;
-    padding: 10px 0px;
+  background-color: #0b0a0ac4;
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
 }
 
 .blink_me {
-    animation: blinker 2s linear infinite;
-  }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
+  animation: blinker 2s linear infinite;
+}
 
-  .mr-10 {
-    margin-right: 10px;
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
+}
 
-  .mt-10 {
-    margin-top: 10px;
-  }
+.mr-10 {
+  margin-right: 10px;
+}
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.form-wrapper {
+  width: 75%;
+}
+
+.display-none {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
   .form-wrapper {
-    width: 75%
+    width: 100%;
   }
+}
 
-  @media only screen and (max-width: 800px) { 
-    .form-wrapper {
-      width: 100%
-    }
+/* slider css */
+.slider {
+  position: relative;
+  /* border: 2px solid red; */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 100%; */
+}
+
+.slider img {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.fade-in-image {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out-image {
+  animation: fadeOut 2s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.logo-wrapper {
+  display: flex !important;
+  align-items: center;
+}
+
+.section-first {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.section-second {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
