@@ -69,6 +69,130 @@
       "follow user": "/follow/{id}",
       search: "/search/?query={value}",
     });
+
+     // visa application form validations
+  $(".ui.form.3gpp-visa").form({
+      fields: {
+        title: {
+          identifier: "title",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please select your title",
+            },
+          ],
+        },
+        email: {
+          identifier: "email",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your email",
+            },
+          ],
+        },
+        firstName: {
+          identifier: "firstName",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your first name",
+            },
+          ],
+        },
+        lastName: {
+          identifier: "lastName",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your last name",
+            },
+          ],
+        },
+        dob: {
+          identifier: "dob",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please select at least two skills",
+            },
+          ],
+        },
+        nationality: {
+          identifier: "nationality",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your nationality",
+            },
+          ],
+        },
+        passportNumber: {
+          identifier: "passportNumber",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your Passport Number",
+            },
+          ],
+        },
+        password: {
+          identifier: "password",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter a password",
+            },
+          ],
+        },
+        passportIssuePlace: {
+          identifier: "passportIssuePlace",
+          rules: [
+            {
+              type: "empty",
+              // prompt: "You must agree to the terms and conditions",
+            },
+          ],
+        },
+        passportIssueDate: {
+          identifier: "passportIssueDate",
+          rules: [
+            {
+              type: "empty",
+              // prompt: "You must agree to the terms and conditions",
+            },
+          ],
+        },
+        passportValidityDate: {
+          identifier: "passportValidityDate",
+          rules: [
+            {
+              type: "empty",
+              // prompt: "You must agree to the terms and conditions",
+            },
+          ],
+        },
+        representingName: {
+          identifier: "representingName",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your representing name",
+            },
+          ],
+        },
+        hotelName: {
+          identifier: "hotelName",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your representing name",
+            },
+          ],
+        },
+      },
+    });
+
   });
 </script>
 
