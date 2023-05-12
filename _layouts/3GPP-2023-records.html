@@ -207,7 +207,7 @@
       const incompleteTarget = e.target.closest("#incomplete");
       const spamTarget = e.target.closest("#spam");
       if (approveTarget || spamTarget || incompleteTarget) {
-        // console.log("gggggggggggggggggggg")
+        // console.log("in ifffff")
         const target = approveTarget || spamTarget || incompleteTarget;
         const defaultApp = getApp();
         const db = getDatabase(defaultApp);
@@ -231,7 +231,7 @@
               set(targetDBRef, snapshot.val())
                 .then((val) => {
                   remove(dbRef).then(async () => {
-                    set(countDBRef, countValue++);
+                    set(countDBRef, countValue);
                   });
                   const element = document.getElementById(key);
                   element.remove();
