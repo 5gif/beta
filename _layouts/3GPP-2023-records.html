@@ -1,86 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<script src="https://www.google.com/recaptcha/api.js?render=6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU"></script>
-<script type="module" src="/js/3GPP-2023.js"></script>
+  {% include head.html %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU"></script>
+  <script type="module" src="/js/3GPP-2023.js"></script>
 
-<body id="page-top">
-  {% include header.html %}
+  <body id="page-top">
+    {% include header.html %}
 
-  <div class="pusher">
-    <div class="ui vertical aligned">
-      {% include menus.html %}
-      <div class="ui container">
-        <div class="mt-30 mb-20">
-          <button id="fetch-btn" class="ui primary button">
-            Submissions
-          </button>
-          <button id="fetch-incomplete-btn" class="ui negative button">
-            Incomplete
-          </button>
-          <button id="fetch-approved-btn" class="ui positive button">
-            Approved
-          </button>
+    <div class="pusher">
+      <div class="ui vertical aligned">
+        {% include menus.html %}
+        <div class="ui container">
+          <div class="mt-30 mb-20">
+            <button id="fetch-btn" class="ui primary button">
+              Submissions
+            </button>
+            <button id="fetch-incomplete-btn" class="ui negative button">
+              Incomplete
+            </button>
+            <button id="fetch-approved-btn" class="ui positive button">
+              Approved
+            </button>
+          </div>
+          <div class="ui negative message display-none" id="fetch-error">
+            <i class="close icon"></i>
+            <div class="header" id="fetch-error-msg"></div>
+          </div>
+          <div class="ui segment" id="recordcontainer">
+            <div class="ui label left ribbon" id="ribbon">click above</div>
+            <hr />
+            <div class="ui cards" id="record-container"></div>
+          </div>
+          <br />
         </div>
-        <div class="ui negative message display-none" id="fetch-error">
-          <i class="close icon"></i>
-          <div class="header" id="fetch-error-msg"></div>
-        </div>
-        <div class="ui segment " id="recordcontainer">
-          <div class="ui label left ribbon" id="ribbon">click above </div>
-          <hr>
-          <div class="ui cards" id="record-container"></div>
-        </div>
-        <br />
       </div>
     </div>
-  </div>
 
-  {% include footer.html %}
-</body>
-{% include script.html %}
-<script type="module">
-  import { getApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-  import {
-    getDatabase,
-    ref,
-    push,
-    set,
-    serverTimestamp,
-    get,
-    remove,
-  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-  import {
-    getFirestore,
-    collection,
-    doc,
-    FieldValue,
-  } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
+    {% include footer.html %}
+  </body>
+  {% include script.html %}
+  <script type="module">
+    import { getApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import {
+      getDatabase,
+      ref,
+      push,
+      set,
+      serverTimestamp,
+      get,
+      remove,
+    } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+    import {
+      getFirestore,
+      collection,
+      doc,
+      FieldValue,
+    } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
 
+    function showCards(records, recordtype) {
+      const container = document.getElementById("record-container");
+      container.innerHTML = "";
+      for (let doc in records) {
+        // console.log("doccc", val[doc]);
+        const obj = records[doc];
+        const div = document.createElement("div");
+        div.className = `ui raised card`;
+        div.id = doc;
+        let shippingTag = obj.isPhysicalCopyRequired
+          ? `<div class="ui label red ribbon"> <i class="icon shipping fast"></i>Shipping</div>`
+          : "";
+        let address = obj.isPhysicalCopyRequired
+          ? `<div class="item">
+                            <b>Address: </b>${obj.notes}
+                          </div>`
+          : "";
 
-  function showCards(records, recordtype) {
-    const container = document.getElementById("record-container");
-    container.innerHTML = ""
-    for (let doc in records) {
-      // console.log("doccc", val[doc]);
-      const obj = records[doc];
-      const div = document.createElement("div");
-      div.className = `ui raised card`;
-      div.id = doc;
-      let shippingTag = obj.isPhysicalCopyRequired ? `<div class="ui label red ribbon"> <i class="icon shipping fast"></i>Shipping</div>` : ""
-      let buttons = "<div class='headers'>No Actions</div>"
-      if (recordtype == undefined) {
-        buttons = `
+        let buttons = "<div class='headers'>No Actions</div>";
+        if (recordtype == undefined) {
+          buttons = `
         <button id="spam" data-id="${doc}" class="ui tiny red button">Spam</button>
                         <button id="incomplete" data-id="${doc}" class="ui tiny yellow button">Incomplete</button>
-                        <button id="approve" data-id="${doc}" class="ui tiny green button">Approve</button>`
-      }
+                        <button id="approve" data-id="${doc}" class="ui tiny green button">Approve</button>`;
+        }
 
-      div.innerHTML = `
+        div.innerHTML = `
                     <div class="content">
                       ${shippingTag}
-                      <div class="header">${obj.title + " " + obj.firstName + " " + obj.lastName  }</div>
-                      <div class="meta">${obj.representingName ? obj.representingName : "UNKNOWN"}</div>
+                      <div class="header">${
+                        obj.title + " " + obj.firstName + " " + obj.lastName
+                      }</div>
+                      <div class="meta"><i class="building icon"></i> ${
+                        obj.representingName ? obj.representingName : "UNKNOWN"
+                      }</div>
+                      <div class="meta"><i class="phone icon"></i> ${
+                        obj.contactNumber ? obj.contactNumber : "UNKNOWN"
+                      }</div>
                       <div class="description">
                         <div class="ui list">
                           <div class="item">
@@ -90,15 +104,14 @@
                             <b>Meetings: </b> ${obj.meetings.join(", ")}
                           </div>
                           <div class="item">
-                            <b>Passport: </b>${obj.passportNumber}, ${obj.passportIssuePlace}
+                            <b>Passport: </b>${obj.passportNumber}, ${
+          obj.passportIssuePlace
+        }
                           </div>
                           <div class="item">
                             <b>Hotel Name: </b>${obj.hotelName}
                           </div>
-                          <div class="item">
-                            <div class="header">Remarks</div>
-                            ${obj.notes}
-                          </div>
+                          ${address}
                       </div>
                       </div>
                     </div>
@@ -107,138 +120,134 @@
                      ${buttons}
                       </div>
                     </div>`;
-      container.appendChild(div);
+        container.appendChild(div);
+      }
     }
-  }
 
-
-
-
-  document.getElementById("fetch-approved-btn").onclick = () => {
-    document.getElementById("recordcontainer").className = "ui segment green"
-    document.getElementById("ribbon").innerHTML = "Approved"
-    const errorWrapper = document.getElementById("fetch-error");
-    const defaultApp = getApp();
-    const db = getDatabase(defaultApp);
-    const dbRef = ref(db, `/3GPPTSG101/approved`);
-    get(dbRef)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          errorWrapper.classList.add("display-none");
-          // console.log("pppppp",snapshot.val());
-          const val = snapshot.val();
-          showCards(val, "approved")
-
-        } else {
-          // console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        errorWrapper.classList.remove("display-none");
-        document.getElementById("fetch-error-msg").innerHTML = error;
-      });
-  };
-
-  document.getElementById("fetch-incomplete-btn").onclick = () => {
-    document.getElementById("recordcontainer").className = "ui segment red"
-    document.getElementById("ribbon").innerHTML = "Incomplete"
-    const errorWrapper = document.getElementById("fetch-error");
-    const defaultApp = getApp();
-    const db = getDatabase(defaultApp);
-    const dbRef = ref(db, `/3GPPTSG101/incomplete`);
-    get(dbRef)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          errorWrapper.classList.add("display-none");
-          // console.log("pppppp",snapshot.val());
-          const val = snapshot.val();
-          // console.log("calling showcards")
-          showCards(val, "incomplete")
-
-        } else {
-          // console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        errorWrapper.classList.remove("display-none");
-        document.getElementById("fetch-error-msg").innerHTML = error;
-      });
-  };
-  document.getElementById("fetch-btn").onclick = () => {
-    document.getElementById("recordcontainer").className = "ui segment blue"
-    document.getElementById("ribbon").innerHTML = "Submitted"
-    const errorWrapper = document.getElementById("fetch-error");
-    const defaultApp = getApp();
-    const db = getDatabase(defaultApp);
-    const dbRef = ref(db, `/forms`);
-    get(dbRef)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          errorWrapper.classList.add("display-none");
-          // console.log("pppppp",snapshot.val());
-          const val = snapshot.val();
-          // console.log("calling showcards")
-          showCards(val)
-
-        } else {
-          // console.log("No data available");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        errorWrapper.classList.remove("display-none");
-        document.getElementById("fetch-error-msg").innerHTML = error;
-      });
-  };
-
-  document.addEventListener("click", function (e) {
-    const approveTarget = e.target.closest("#approve");
-    const incompleteTarget = e.target.closest("#incomplete");
-    const spamTarget = e.target.closest("#spam");
-    if (approveTarget || spamTarget || incompleteTarget) {
-      const target = approveTarget || spamTarget || incompleteTarget;
+    document.getElementById("fetch-approved-btn").onclick = () => {
+      document.getElementById("recordcontainer").className = "ui segment green";
+      document.getElementById("ribbon").innerHTML = "Approved";
+      const errorWrapper = document.getElementById("fetch-error");
       const defaultApp = getApp();
       const db = getDatabase(defaultApp);
-      const key = target.getAttribute("data-id");
-      const dbRef = ref(db, `/forms/${key}`);
-
-      let url;
-      if (incompleteTarget) url = "incomplete";
-      if (approveTarget) url = "approved";
-      if (spamTarget) url = "spam";
-
-      const countDBRef = ref(db, `/3GPPTSG101/stats/${url}`);
-      let countValue = 0;
-      get(countDBRef).then((snapshot) => {
-        countValue = snapshot.val() + 1;
-      });
+      const dbRef = ref(db, `/3GPPTSG101/approved`);
       get(dbRef)
-        .then(async (snapshot) => {
+        .then((snapshot) => {
           if (snapshot.exists()) {
-            const targetDBRef = ref(db, `/3GPPTSG101/${url}/${key}`);
-            set(targetDBRef, snapshot.val())
-              .then((val) => {
-                remove(dbRef).then(async () => {
-                  set(countDBRef, countValue++);
-                });
-                const element = document.getElementById(key);
-                element.remove();
-              })
-              .catch((err) => {
-                // console.log("write error", err);
-              });
-            // }
+            errorWrapper.classList.add("display-none");
+            // console.log("pppppp",snapshot.val());
+            const val = snapshot.val();
+            showCards(val, "approved");
           } else {
             // console.log("No data available");
           }
         })
         .catch((error) => {
           console.error(error);
+          errorWrapper.classList.remove("display-none");
+          document.getElementById("fetch-error-msg").innerHTML = error;
         });
-    }
-  });
-</script>
+    };
 
+    document.getElementById("fetch-incomplete-btn").onclick = () => {
+      document.getElementById("recordcontainer").className = "ui segment red";
+      document.getElementById("ribbon").innerHTML = "Incomplete";
+      const errorWrapper = document.getElementById("fetch-error");
+      const defaultApp = getApp();
+      const db = getDatabase(defaultApp);
+      const dbRef = ref(db, `/3GPPTSG101/incomplete`);
+      get(dbRef)
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            errorWrapper.classList.add("display-none");
+            // console.log("pppppp",snapshot.val());
+            const val = snapshot.val();
+            // console.log("calling showcards")
+            showCards(val, "incomplete");
+          } else {
+            // console.log("No data available");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          errorWrapper.classList.remove("display-none");
+          document.getElementById("fetch-error-msg").innerHTML = error;
+        });
+    };
+    document.getElementById("fetch-btn").onclick = () => {
+      // console.log("fetch-btn clicked====")
+      document.getElementById("recordcontainer").className = "ui segment blue";
+      document.getElementById("ribbon").innerHTML = "Submitted";
+      const errorWrapper = document.getElementById("fetch-error");
+      const defaultApp = getApp();
+      const db = getDatabase(defaultApp);
+      const dbRef = ref(db, `/forms`);
+      get(dbRef)
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            errorWrapper.classList.add("display-none");
+            // console.log("pppppp",snapshot.val());
+            const val = snapshot.val();
+            // console.log("calling showcards")
+            showCards(val);
+          } else {
+            // console.log("No data available");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          errorWrapper.classList.remove("display-none");
+          document.getElementById("fetch-error-msg").innerHTML = error;
+        });
+    };
+
+    document.addEventListener("click", function (e) {
+      // console.log("global event===")
+      const approveTarget = e.target.closest("#approve");
+      const incompleteTarget = e.target.closest("#incomplete");
+      const spamTarget = e.target.closest("#spam");
+      if (approveTarget || spamTarget || incompleteTarget) {
+        // console.log("gggggggggggggggggggg")
+        const target = approveTarget || spamTarget || incompleteTarget;
+        const defaultApp = getApp();
+        const db = getDatabase(defaultApp);
+        const key = target.getAttribute("data-id");
+        const dbRef = ref(db, `/forms/${key}`);
+
+        let url;
+        if (incompleteTarget) url = "incomplete";
+        if (approveTarget) url = "approved";
+        if (spamTarget) url = "spam";
+
+        const countDBRef = ref(db, `/3GPPTSG101/stats/${url}`);
+        let countValue = 0;
+        get(countDBRef).then((snapshot) => {
+          countValue = snapshot.val() + 1;
+        });
+        get(dbRef)
+          .then(async (snapshot) => {
+            if (snapshot.exists()) {
+              const targetDBRef = ref(db, `/3GPPTSG101/${url}/${key}`);
+              set(targetDBRef, snapshot.val())
+                .then((val) => {
+                  remove(dbRef).then(async () => {
+                    set(countDBRef, countValue++);
+                  });
+                  const element = document.getElementById(key);
+                  element.remove();
+                })
+                .catch((err) => {
+                  // console.log("write error", err);
+                });
+              // }
+            } else {
+              // console.log("No data available");
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    });
+  </script>
 </html>
