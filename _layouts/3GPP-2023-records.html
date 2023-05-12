@@ -27,8 +27,7 @@
             <div class="header" id="fetch-error-msg"></div>
           </div>
           <div class="ui segment" id="recordcontainer">
-            <div class="ui label left ribbon" id="ribbon">click above</div>
-            <hr />
+            <div class="ui label top attached" id="ribbon">click above</div>
             <div class="ui cards" id="record-container"></div>
           </div>
           <br />
@@ -140,6 +139,7 @@
             showCards(val, "approved");
           } else {
             // console.log("No data available");
+            document.getElementById("record-container").innerHTML = "No Entries";
           }
         })
         .catch((error) => {
@@ -166,6 +166,7 @@
             showCards(val, "incomplete");
           } else {
             // console.log("No data available");
+            document.getElementById("record-container").innerHTML = "No Entries";
           }
         })
         .catch((error) => {
@@ -192,6 +193,7 @@
             showCards(val);
           } else {
             // console.log("No data available");
+            document.getElementById("record-container").innerHTML  = "No Entries";
           }
         })
         .catch((error) => {
