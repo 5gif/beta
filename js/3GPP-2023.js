@@ -7,10 +7,6 @@ import {
   serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
-// import { serverTimestamp } from  "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
-// const database = getDatabase();
-// submitPost.addEventListener("click", writeToDB, false);
-
 async function writeToDB(data) {
   const defaultApp = getApp();
   const db = getDatabase(defaultApp);
@@ -20,34 +16,11 @@ async function writeToDB(data) {
   const errorWrapper = document.getElementById("error-event");
 
   grecaptcha.ready(function () {
-    // grecaptcha.render("container", {
-    //   sitekey: "6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU"
-    // });
     grecaptcha
       .execute("6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU", {
         action: "submit",
       })
       .then(function (token) {
-        // Add your logic to submit to your backend server here.
-        // fetch("https://compute.sendildevar.in:9001/rpc/validate", {
-        //   method: "POST",
-        //   mode: "cors",
-        //   headers: {
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({
-        //     ...data,
-        //     source: "beta",
-        //     token,
-        //   }),
-        // })
-        //   .then((res) => {
-        //     console.log("ress==", res);
-        //   })
-        //   .catch((err) => {
-        //     console.log("err ", err);
-        //   });
-        console.log("newDataRef===", newDataRef.key);
         const payload = {
           ...data,
           source: "beta",
@@ -65,35 +38,15 @@ async function writeToDB(data) {
               payload,
             };
 
-            console.log("window.lastsubmitted===", window.lastSubmitted);
           })
           .catch((error) => {
-            console.log("error in posting", error);
             errorWrapper.classList.remove("display-none");
           });
       });
   });
 }
 
-// document.getElementById("approve-btn").onclick = () => {
-//   console.log("approve clicked =====");
-//   // for approval
-//   if (window.lastSubmitted) {
-//     const defaultApp = getApp();
-//     const db = getDatabase(defaultApp);
-//     const dbRefapproved = ref(
-//       db,
-//       `/3GPPTSG101/approved/${window.lastSubmitted.key}`
-//     );
-//     set(dbRefapproved, window.lastSubmitted.payload).then(() => {
-//       console.log("approved====");
-//       window.lastSubmitted = null
-//     });
-//   }
-// };
-
 const visaForm = document.getElementById("visa-apply");
-console.log("gggggggg", visaForm);
 if (visaForm) {
   visaForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -114,6 +67,7 @@ if (visaForm) {
     let dateDeparture = formData.get("dateDeparture");
     let title = formData.get("title");
     let notes = formData.get("notes") ? formData.get("notes") : "";
+    let contactNumber = formData.get("contactNumber");
     let isPhysicalCopyRequired =
       formData.get("isPhysicalCopyRequired") === "on" ? true : false;
     let SA_101_bangalore =
@@ -141,8 +95,35 @@ if (visaForm) {
       alert("Select atleast one meeting");
       return false;
     }
-    //const testing = formData.get("testing") === "on" ? true : false;
-    const testing = false
+
+    if (
+      email === "" ||
+      firstName === "" ||
+      lastName === "" ||
+      dob === "" ||
+      nationality === "" ||
+      passportNumber === "" ||
+      passportIssueDate === "" ||
+      passportIssuePlace === "" ||
+      passportValidityDate === "" ||
+      representingName === "" ||
+      hotelReservationNumber === "" ||
+      dateArrival === "" ||
+      dateDeparture === "" ||
+      hotelName === "" ||
+      meetings === "" ||
+      title === "" ||
+      contactNumber === ""
+    ) {
+      alert("Enter all required fields");
+      return false;
+    }
+
+    if (isPhysicalCopyRequired && notes === "") {
+      alert("Address is required if physical copy is needed.");
+      return false;
+    }
+
     const data = {
       email,
       firstName,
@@ -162,10 +143,8 @@ if (visaForm) {
       hotelName,
       meetings,
       title,
-      testing,
+      contactNumber
     };
     writeToDB(data);
   });
-} else {
-  console.log("no visa form====");
 }

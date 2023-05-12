@@ -4,7 +4,6 @@
   <script src="https://www.google.com/recaptcha/api.js?render=6Ld0ENAlAAAAAM8nZ4oz4EO4kwevOv2c_it2EAdU"></script>
   <script type="module" src="/js/3GPP-2023.js"></script>
 
-
   <body id="page-top">
     {% include header.html %}
 
@@ -44,7 +43,6 @@
                 a significant role in shaping the strategic, commercial and
                 regulatory development of the 5G ecosystem in India.
               </h3>
-              
             </div>
           </div>
         </div>
@@ -52,23 +50,25 @@
           <div class="thirteen wide olive column section-first">
             <h1>Visa support letter</h1>
             <h2>
-              The 5GIF and TSDSI welcomes delegates for the 3GPP SA#101, 3GPP RAN#101 and 3GPP CT#101 meetings during Sep 2023, in Bangalore.
+              The 5GIF and TSDSI welcomes delegates for the 3GPP SA#101, 3GPP
+              RAN#101 and 3GPP CT#101 meetings during Sep 2023, in Bangalore.
             </h2>
             <h5>
-              Please complete the form below and submit for us to process your Visa support letter.
+              Please complete the form below and submit for us to process your
+              Visa support letter.
             </h5>
           </div>
           <div class="three wide olive column logo-wrapper section-second">
             <div class="ui middle aligned centered small image">
-              <img src="../images/3gpp_logo.png" />
+              <img class="ui tiny image" src="../images/3gpp_logo_new.png" />
+              <img class="ui tiny image" src="../images/TSDSI_FINAL-Logo-512x512.webp" style="margin-top:5px;"/>
             </div>
           </div>
         </div>
         <div class="mb-20 mt-30">
           <div class="ui grid container raised segment">
             <div class="ui column form-wrapper mb-20 mt-20">
-               <h1 class="ui red header">CAUTION : UNDER beta testing !!!</h1>
-              <form class="ui form 3gpp-visa" id="visa-apply">                
+              <form class="ui form 3gpp-visa" id="visa-apply">
                 <h4 class="ui dividing header">Personal details</h4>
                 <div class="fields">
                   <div class="two wide field">
@@ -96,11 +96,24 @@
                     />
                   </div>
                 </div>
+                <div  class="three fields">
+                  <div class="required field">
+                    <label>Contact number </label>
+                    <input
+                      type="text"
+                      name="contactNumber"
+                      placeholder="Contact Number"
+                    />
+                  </div>
+                </div>
 
                 <div class="three fields">
                   <div class="required field">
                     <label>Email</label>
                     <input type="text" name="email" placeholder="Email" />
+                    <div class="meta">
+                      You must use your registered 3GPP email address
+                    </div>
                   </div>
                   <div class="required field">
                     <div class="ui date required">
@@ -202,7 +215,6 @@
                     <label>RAN#101</label>
                   </div>
                 </div>
-
                 <h4 class="ui dividing header">Hotel Reservation details</h4>
                 <div class="three fields">
                   <div class="required field">
@@ -217,27 +229,43 @@
                       </option>
                     </select>
                   </div>
+                  <div class="required field">
+                    <label>Hotel Reservation Number </label>
+                    <input
+                      type="text"
+                      name="hotelReservationNumber"
+                      placeholder="Reservation number"
+                    />
+                  </div>
                 </div>
-
-                <div class="field">
-                  <label>Notes</label>
-                  <textarea
-                    name="notes"
-                    placeholder="Notes"
-                    rows="2"
-                  ></textarea>
-                </div>
-
                 <div class="ui checkbox">
-                  <input type="checkbox" name="isPhysicalCopyRequired" />
+                  <input id="isPhysicalCopyRequired" type="checkbox" name="isPhysicalCopyRequired" />
                   <label>
                     Please check if you are required to submit a physical copy
                     of the Invite letter.</label
                   >
                 </div>
+
+                <div class="field required mt-20" id="address">
+                  <label>Address</label>
+                  <textarea
+                    name="notes"
+                    placeholder="Address"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <div class="fields">
+                  <div class="ui checkbox field">
+                    <input id="iAgree" type="checkbox" name="iAgree" />
+                    <label>
+                      I agree to store this information for purpose of creating visa invite letter.</label
+                      >
+                    </div>
+                  </div>
+
                 <div class="six fields">
                   <div class="field" style="margin-top: 10px">
-                    <button class="ui primary button" type="submit">
+                    <button class="ui primary button disabled" type="submit" id="submit">
                       Submit
                     </button>
                   </div>
@@ -265,6 +293,7 @@
   </body>
   {% include script.html %}
   <script>
+     $("#address").hide()
     // sider js
     const slider = document.getElementById("slider");
     const images = slider.querySelectorAll("img");
@@ -284,5 +313,21 @@
       }
       i++;
     }, 2000);
+
+    document.getElementById("isPhysicalCopyRequired").addEventListener("change", function(e) {
+      if(e.target.checked){
+        $("#address").show()
+      } else {
+        $("#address").hide()
+      }
+    })
+
+    document.getElementById("iAgree").addEventListener("change", function(e) {
+      if(e.target.checked){
+        $("#submit").removeClass("disabled")
+      } else {
+        $("#submit").addClass("disabled")
+      }
+    })
   </script>
 </html>

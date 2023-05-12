@@ -520,7 +520,7 @@ import { default as wiless } from "https://api.observablehq.com/@wiless/units.js
 var wilessunitsobs = (varname) => {
 
     if (varname == "genericInput") {
-        console.log("NAME :", varname);
+        // console.log("NAME :", varname);
         return {
             fulfilled: v => {
                 // console.log(`fulfilled: ${varname} : ${v}`);
@@ -529,7 +529,7 @@ var wilessunitsobs = (varname) => {
         }
     }
     if (varname == "UIInputs") {
-        console.log("NAME :", varname);
+        // console.log("NAME :", varname);
         return {
             fulfilled: v => {
                 console.log(`fulfilled: ${varname} : ${v}`);
@@ -538,7 +538,7 @@ var wilessunitsobs = (varname) => {
         }
     }
     if (varname == "number") {
-        console.log("NAME :", varname);
+        // console.log("NAME :", varname);
         return {
             fulfilled: v => {
                 // console.log(`fulfilled: ${varname} : ${v}`);
@@ -547,7 +547,7 @@ var wilessunitsobs = (varname) => {
         }
     }
     if (varname == "range") {
-        console.log("NAME :", varname);
+        // console.log("NAME :", varname);
         return {
             fulfilled: v => {
                 window.UIrange = v;

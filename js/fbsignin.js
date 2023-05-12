@@ -16,11 +16,11 @@ let app;
 import("../localkey.js")
   .then((obj) => {
     firebaseConfig = obj.firebaselocalConfig;
-    console.log("setting up local key", firebaseConfig);
+    // console.log("setting up local key", firebaseConfig);
     app = initializeApp(firebaseConfig);
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
-      console.log("onAuthStateChanged user=1111=", user);
+      // console.log("onAuthStateChanged user=1111=", user);
       if (user != null) {
         $(".item.sign-out").toggleClass("grey");
         $("#approve-btn").removeClass("disabled");
@@ -31,7 +31,7 @@ import("../localkey.js")
     });
   })
   .catch((err) => {
-    console.log("Setting up web key", err);
+    // console.log("Setting up web key", err);
     firebaseConfig = {
       apiKey: "AIzaSyBU0r_2MGgtMDvQYMwLlIIsvbDp5ktAQ4M",
       authDomain: "gif-tools-1d6ce.firebaseapp.com",
@@ -46,7 +46,7 @@ import("../localkey.js")
     app = initializeApp(firebaseConfig);
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
-      console.log("onAuthStateChanged user=2222=", user);
+      // console.log("onAuthStateChanged user=2222=", user);
       if (user != null) {
         $(".item.sign-out").toggleClass("grey");
         $("#approve-btn").removeClass("disabled");
@@ -76,7 +76,6 @@ document.getElementById("fbsignin").onclick = () => {
   document.getElementById("signout").onclick = () => {
     signOut(getAuth()).then(console.log("signing output"));
   };
-  console.log("email", email);
   signInWithEmailAndPassword(auth, email.trim(), password)
     .then((userCredential) => {
       // Signed in
@@ -93,7 +92,7 @@ document.getElementById("fbsignin").onclick = () => {
       document.querySelector("#loginform i").classList.toggle("disabled");
 
       $("#dlglogin").modal("hide");
-      console.log("Success", user);
+      // console.log("Success", user);
       $("#loginform").hide();
       if (user.photoURL !== null) {
         document.getElementById("userdp").src = user.photoURL;
@@ -139,6 +138,6 @@ document.getElementById("fbsignin").onclick = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("Error", error);
+      // console.log("Error", error);
     });
 };

@@ -56,7 +56,6 @@
     doc,
     FieldValue,
   } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js";
-  console.log("FieldValue", FieldValue);
 
 
   function showCards(records, recordtype) {
@@ -128,11 +127,10 @@
           errorWrapper.classList.add("display-none");
           // console.log("pppppp",snapshot.val());
           const val = snapshot.val();
-          console.log("calling showcards")
           showCards(val, "approved")
 
         } else {
-          console.log("No data available");
+          // console.log("No data available");
         }
       })
       .catch((error) => {
@@ -155,11 +153,11 @@
           errorWrapper.classList.add("display-none");
           // console.log("pppppp",snapshot.val());
           const val = snapshot.val();
-          console.log("calling showcards")
+          // console.log("calling showcards")
           showCards(val, "incomplete")
 
         } else {
-          console.log("No data available");
+          // console.log("No data available");
         }
       })
       .catch((error) => {
@@ -181,11 +179,11 @@
           errorWrapper.classList.add("display-none");
           // console.log("pppppp",snapshot.val());
           const val = snapshot.val();
-          console.log("calling showcards")
+          // console.log("calling showcards")
           showCards(val)
 
         } else {
-          console.log("No data available");
+          // console.log("No data available");
         }
       })
       .catch((error) => {
@@ -229,11 +227,11 @@
                 element.remove();
               })
               .catch((err) => {
-                console.log("write error", err);
+                // console.log("write error", err);
               });
             // }
           } else {
-            console.log("No data available");
+            // console.log("No data available");
           }
         })
         .catch((error) => {

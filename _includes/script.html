@@ -70,8 +70,8 @@
       search: "/search/?query={value}",
     });
 
-     // visa application form validations
-  $(".ui.form.3gpp-visa").form({
+    // visa application form validations
+    $(".ui.form.3gpp-visa").form({
       fields: {
         title: {
           identifier: "title",
@@ -190,9 +190,26 @@
             },
           ],
         },
+        hotelReservationNumber: {
+          identifier: "hotelReservationNumber",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your hotel reservation number",
+            },
+          ],
+        },
+        contactNumber: {
+          identifier: "contactNumber",
+          rules: [
+            {
+              type: "empty",
+              prompt: "Please enter your contact number",
+            },
+          ],
+        },
       },
     });
-
   });
 </script>
 
@@ -203,17 +220,19 @@
     initializeApp,
   } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
 
-  console.log("Current apps", getApps());
+  // console.log("Current apps", getApps());
   import {
     getAuth,
     onAuthStateChanged,
   } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 
   var apps = getApps();
-  console.log("Current apps", apps);
+  // console.log("Current apps", apps);
   if (apps.length > 0) {
     const auth = getAuth();
-    onAuthStateChanged(auth, (user) => console.log("Script User is ", user));
+    onAuthStateChanged(auth, (user) => {
+      // console.log("Script User is ", user)
+    });
   }
 </script>
 <script src="js/fbsignin.js" type="module"></script>
